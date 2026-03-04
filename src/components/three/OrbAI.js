@@ -195,7 +195,8 @@ function ChatbotWrapper({ orbState }) {
 function OrbScene() {
     const { state: orbState, triggerReacting, triggerExplosion } = useOrbState();
     const groupRef = useRef();
-    const { mouse } = useThree();
+    const { mouse, viewport } = useThree();
+    const isMobile = viewport.width < 6;
 
     useFrame((state) => {
         if (!groupRef.current) return;
@@ -203,9 +204,10 @@ function OrbScene() {
     });
 
     const isOrbVisible = orbState !== 'exploded' && orbState !== 'reforming';
+    const position = isMobile ? [0, 1.8, 0] : [2.8, 0, 0];
 
     return (
-        <group ref={groupRef} position={[2.8, 0, 0]}>
+        <group ref={groupRef} position={position} scale={isMobile ? 0.8 : 1.0}>
             <group onPointerDown={() => triggerExplosion()} onPointerEnter={() => triggerReacting()}>
                 <OrbCore orbState={orbState} />
                 {isOrbVisible && (

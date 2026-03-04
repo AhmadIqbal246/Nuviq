@@ -147,11 +147,18 @@ function BlackHoleScene({ setScreenPos }) {
 
 export default function BlackHoleBackground() {
     const [screenPos, setScreenPos] = React.useState(new THREE.Vector2(0.5, 0.5));
+    const [mounted, setMounted] = React.useState(false);
+
+    React.useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null;
 
     return (
-        <div className="fixed inset-0 w-screen h-screen z-0 pointer-events-none">
+        <div className="fixed inset-0 w-full h-full z-0 pointer-events-none">
             <Canvas
-                camera={{ position: [0, 4, 15], fov: 60 }}
+                camera={{ position: [0, 4, window.innerWidth < 768 ? 20 : 15], fov: 60 }}
                 gl={{ alpha: true, antialias: true, powerPreference: "high-performance" }}
                 style={{ background: "transparent" }}
             >

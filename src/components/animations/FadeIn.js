@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-export default function FadeIn({ children, delay = 0, direction = "up", distance = 50 }) {
+export default function FadeIn({ children, delay = 0, direction = "up", distance = 50, className = "" }) {
     const directions = {
         up: { y: distance },
         down: { y: -distance },
@@ -27,6 +27,7 @@ export default function FadeIn({ children, delay = 0, direction = "up", distance
                 delay: delay,
                 ease: [0.25, 0.4, 0.25, 1]
             }}
+            className={className}
         >
             {children}
         </motion.div>

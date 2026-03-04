@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Html } from "@react-three/drei";
+import { useThree } from "@react-three/fiber";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 /**
@@ -10,23 +11,26 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
  * Wrapped in Drei's Html to integrate seamlessly into the R3F Canvas.
  */
 export function AIChatbot() {
+    const { viewport } = useThree();
+    const isMobile = viewport.width < 6;
+
     return (
         <group>
             <Html
                 center
                 transform
-                distanceFactor={6}
+                distanceFactor={isMobile ? 8 : 6}
                 position={[0, 0, 0]}
                 style={{
-                    width: '400px',
-                    height: '400px',
+                    width: isMobile ? '280px' : '400px',
+                    height: isMobile ? '280px' : '400px',
                     pointerEvents: 'none',
                     userSelect: 'none',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
                     background: 'transparent',
-                    position: 'relative' // Ensure non-static position
+                    position: 'relative' // Resolve non-static warning
                 }}
             >
                 <div className="w-full h-full flex items-center justify-center bg-transparent">

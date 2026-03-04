@@ -31,7 +31,7 @@ export default function Navbar() {
             className={`fixed top-0 left-0 w-full z-[1000] px-6 lg:px-12 py-6 transition-all duration-300 ${isScrolled ? "glass border-b border-white/10" : "bg-transparent py-10"
                 }`}
         >
-            <div className="container mx-auto flex items-center justify-between">
+            <div className="w-full flex items-center justify-between">
                 <Link href="/">
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}

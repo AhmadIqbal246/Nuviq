@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import FadeIn from "@/components/animations/FadeIn";
 import TextReveal from "@/components/animations/TextReveal";
@@ -47,17 +47,17 @@ export default function Hero() {
                 {...animationProps}
                 className="container mx-auto px-6 lg:px-12 flex relative z-10"
             >
-                <div className="flex items-center min-h-screen w-full">
+                <div className="flex flex-col lg:flex-row items-center justify-center min-h-screen w-full">
                     {/* Content 2/3 (now on left) */}
-                    <div className="w-full lg:w-2/3 flex flex-col gap-6 pr-0 lg:pr-12">
-                        <FadeIn direction="down" delay={hasPlayed ? 0.2 : 0} distance={20}>
+                    <div className="w-full lg:w-2/3 flex flex-col gap-6 pr-0 lg:pr-12 items-center lg:items-start text-center lg:text-left">
+                        <FadeIn direction="down" delay={hasPlayed ? 0.2 : 0} distance={20} className="flex justify-center lg:justify-start">
                             <span className="inline-block py-2 px-4 rounded-full bg-violet/10 border border-violet/20 text-violet font-mono text-sm">
                                 // WELCOME TO MY UNIVERSE
                             </span>
                         </FadeIn>
 
-                        <div className="flex flex-col gap-2">
-                            <h1 className="text-6xl md:text-8xl font-serif font-bold text-text-primary">
+                        <div className="flex flex-col gap-2 items-center lg:items-start text-center lg:text-left">
+                            <h1 className="text-5xl md:text-8xl font-serif font-bold text-text-primary">
                                 I'm <span className="hover:text-gradient-accent transition-colors duration-500">Ahmad</span>
                             </h1>
                             <div className="h-12 overflow-hidden">
@@ -75,11 +75,11 @@ export default function Hero() {
 
                         <TextReveal
                             text="Designing digital experiences that bridge the gap between imagination and implementation. Specializing in high-end interfaces and interactive motion."
-                            className="text-muted text-lg max-w-lg"
+                            className="text-muted text-base md:text-lg max-w-lg text-center lg:text-left mx-auto lg:mx-0"
                             delay={hasPlayed ? 0.5 : 0}
                         />
 
-                        <div className="flex flex-wrap gap-6 mt-6">
+                        <div className="flex flex-wrap gap-4 md:gap-6 mt-6 justify-center lg:justify-start">
                             <MagneticButton>
                                 <button className="py-4 px-10 bg-gradient-accent text-base font-bold rounded-lg shadow-glow hover:scale-105 transition-transform duration-300">
                                     View Projects

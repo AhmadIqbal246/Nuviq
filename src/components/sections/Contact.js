@@ -25,7 +25,7 @@ export default function Contact() {
 
             <div className="container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                 {/* Left Column - Form */}
-                <div className="flex flex-col gap-10">
+                <div className="flex flex-col gap-10 items-center lg:items-start text-center lg:text-left">
                     <div className="flex items-center gap-4">
                         <div className="w-12 h-[2px] bg-gradient-accent" />
                         <span className="text-violet font-mono text-sm tracking-widest uppercase">// GET IN TOUCH</span>
@@ -121,7 +121,7 @@ export default function Contact() {
                     <div className="flex flex-col gap-8">
                         <h3 className="text-3xl font-serif font-bold text-text-primary">Contact Details</h3>
 
-                        <div className="flex flex-col gap-6 font-mono text-lg text-muted">
+                        <div className="flex flex-col gap-6 font-mono text-base md:text-lg text-muted items-center lg:items-start">
                             <a href="mailto:hello@ahmad.dev" className="flex items-center gap-6 hover:text-cyan transition-colors">
                                 <div className="p-4 rounded-full bg-surface border border-white/5 text-cyan">
                                     <Mail size={24} />
@@ -143,7 +143,7 @@ export default function Contact() {
                         </div>
                     </div>
 
-                    <div className="flex flex-col gap-8 mt-10">
+                    <div className="flex flex-col gap-8 mt-10 items-center lg:items-start">
                         <h3 className="text-3xl font-serif font-bold text-text-primary">Social Links</h3>
                         <div className="flex gap-6">
                             {[SiGithub, SiLinkedin, SiTwitter, SiInstagram].map((Icon, i) => (
