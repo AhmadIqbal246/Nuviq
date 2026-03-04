@@ -18,8 +18,8 @@ export default function Hero() {
     const [mounted, setMounted] = useState(false);
     useEffect(() => { setMounted(true); }, []);
 
-    const [role, setRole] = useState("Creative Coder");
-    const roles = ["Creative Coder", "UI Architect", "Motion Designer", "3D Enthusiast"];
+    const [role, setRole] = useState("Web Development");
+    const roles = ["Web Development", "AI Solutions", "Custom Software", "Digital Transformation"];
     const roleIndex = useRef(0);
 
     useEffect(() => {
@@ -66,25 +66,34 @@ export default function Hero() {
                 className="container mx-auto px-6 lg:px-12 flex relative z-10"
             >
                 <div className="flex flex-col lg:flex-row items-center justify-center min-h-screen w-full">
-                    {/* Content 2/3 (now on left) */}
-                    <div className="w-full lg:w-2/3 flex flex-col gap-6 pr-0 lg:pr-12 items-center lg:items-start text-center lg:text-left">
+                    {/* Content 2/3 — slides in from left */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -200 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+                        className="w-full lg:w-2/3 flex flex-col gap-6 pr-0 lg:pr-12 items-center lg:items-start text-center lg:text-left"
+                    >
                         <FadeIn direction="down" delay={0.2} distance={20} className="flex justify-center lg:justify-start">
                             <span className="inline-block py-2 px-4 rounded-full bg-violet/10 border border-violet/20 text-violet font-mono text-sm">
-                                // WELCOME TO MY UNIVERSE
+                                NOVASOFT — IT SOLUTIONS
                             </span>
                         </FadeIn>
 
                         <div className="flex flex-col gap-2 items-center lg:items-start text-center lg:text-left">
-                            <h1 className="text-5xl md:text-8xl font-serif font-bold text-text-primary">
-                                I'm <span className="hover:text-gradient-accent transition-colors duration-500">Ahmad</span>
+                            <h1 className="text-4xl md:text-7xl font-serif font-bold text-text-primary leading-tight">
+                                Transform Your Business{" "}
+                                <span className="hover:text-gradient-accent transition-colors duration-500">
+                                    with AI & Web Solutions.
+                                </span>
                             </h1>
-                            <div className="h-12 overflow-hidden">
+                            <div className="h-12 overflow-hidden mt-2">
                                 <motion.p
                                     key={role}
                                     initial={{ y: 20, opacity: 0 }}
                                     animate={{ y: 0, opacity: 1 }}
                                     exit={{ y: -20, opacity: 0 }}
-                                    className="text-2xl md:text-4xl text-cyan font-mono"
+                                    style={{ fontFamily: 'var(--font-space)' }}
+                                    className="text-2xl md:text-3xl text-cyan font-bold tracking-wide"
                                 >
                                     {role}
                                 </motion.p>
@@ -92,7 +101,7 @@ export default function Hero() {
                         </div>
 
                         <TextReveal
-                            text="Designing digital experiences that bridge the gap between imagination and implementation. Specializing in high-end interfaces and interactive motion."
+                            text="We don't just build software — we engineer digital ecosystems. From AI-driven automation to pixel-perfect web experiences, NovaSoft is your launchpad to the future."
                             className="text-muted text-base md:text-lg max-w-lg text-center lg:text-left mx-auto lg:mx-0"
                             delay={0.5}
                         />
@@ -100,18 +109,18 @@ export default function Hero() {
                         <div className="flex flex-wrap gap-4 md:gap-6 mt-6 justify-center lg:justify-start">
                             <MagneticButton>
                                 <button className="py-4 px-10 bg-gradient-accent text-base font-bold rounded-lg shadow-glow hover:scale-105 transition-transform duration-300">
-                                    View Projects
+                                    Start Your Project
                                 </button>
                             </MagneticButton>
                             <MagneticButton>
                                 <button className="py-4 px-10 border border-violet text-text-primary font-bold rounded-lg hover:bg-violet/10 transition-colors duration-300">
-                                    Let's Talk
+                                    Our Services
                                 </button>
                             </MagneticButton>
                         </div>
-                    </div>
+                    </motion.div>
 
-                    {/* Right spacer — orb occupies this space visually on desktop (now on right) */}
+                    {/* Right spacer — chatbot occupies this space visually on desktop */}
                     <div className="hidden lg:block w-1/3" />
                 </div>
             </motion.div>
@@ -125,6 +134,6 @@ export default function Hero() {
                 <div className="w-[1px] h-12 bg-muted/30" />
                 <span className="rotate-90 origin-left">SCROLL TO EXPLORE</span>
             </motion.div>
-        </section>
+        </section >
     );
 }

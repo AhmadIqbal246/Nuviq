@@ -25,11 +25,11 @@ export default function Projects() {
             <div className="container mx-auto px-6 lg:px-12">
                 <div className="flex flex-col gap-6 mb-20">
                     <FadeIn direction="down" delay={0.2} distance={20}>
-                        <span className="text-violet font-mono text-sm tracking-widest uppercase">// FEATURED WORK</span>
+                        <span className="text-violet font-mono text-sm tracking-widest uppercase">// OUR WORK</span>
                     </FadeIn>
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-10">
                         <h2 className="text-4xl md:text-6xl font-serif font-bold text-text-primary">
-                            Portfolio of <br /> <span className="text-violet">Selective</span> Projects.
+                            Case Studies & <br /> <span className="text-violet">Recent</span> Projects.
                         </h2>
 
                         {/* Filter Tabs */}

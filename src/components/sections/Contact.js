@@ -32,7 +32,7 @@ export default function Contact() {
                     </div>
 
                     <h2 className="text-4xl md:text-6xl font-serif font-bold text-text-primary">
-                        Let's <span className="text-cyan transition-colors duration-500 hover:text-gradient-accent">Connect</span> and Build.
+                        Let's <span className="text-cyan transition-colors duration-500 hover:text-gradient-accent">Build</span> Something Great.
                     </h2>
 
                     <div className="relative mt-10">
@@ -47,7 +47,7 @@ export default function Contact() {
                                 >
                                     <CheckCircle className="text-cyan" size={80} />
                                     <h3 className="text-3xl font-serif font-bold text-text-primary">Message Sent Successfully!</h3>
-                                    <p className="text-muted text-lg">Thank you for reaching out. I'll get back to you within 24 hours.</p>
+                                    <p className="text-muted text-lg">Thank you for reaching out. Our team will get back to you within 24 hours.</p>
                                     <button
                                         onClick={() => setFormStatus("idle")}
                                         className="mt-6 px-10 py-3 rounded-full border border-cyan/30 text-cyan hover:bg-cyan/10 transition-colors uppercase tracking-widest font-mono text-sm"
@@ -90,7 +90,7 @@ export default function Contact() {
                                         <textarea
                                             required
                                             rows="6"
-                                            placeholder="Tell me about your project..."
+                                            placeholder="Tell us about your project..."
                                             className="p-10 rounded-3xl bg-surface border border-white/5 text-text-primary focus:border-violet focus:ring-1 focus:ring-violet transition-all outline-none resize-none"
                                         />
                                     </div>
@@ -126,7 +126,7 @@ export default function Contact() {
                                 <div className="p-4 rounded-full bg-surface border border-white/5 text-cyan">
                                     <Mail size={24} />
                                 </div>
-                                hello@ahmad.dev
+                                hello@novasoft.dev
                             </a>
                             <a href="tel:+1234567890" className="flex items-center gap-6 hover:text-violet transition-colors">
                                 <div className="p-4 rounded-full bg-surface border border-white/5 text-violet">

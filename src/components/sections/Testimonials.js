@@ -37,10 +37,10 @@ export default function Testimonials() {
             <div className="container mx-auto px-6 lg:px-12">
                 <div className="flex flex-col gap-6 mb-24 items-center justify-center text-center">
                     <FadeIn direction="down" delay={0.2} distance={20}>
-                        <span className="text-violet font-mono text-sm tracking-widest uppercase">// KIND WORDS</span>
+                        <span className="text-violet font-mono text-sm tracking-widest uppercase">// TESTIMONIALS</span>
                     </FadeIn>
                     <h2 className="text-4xl md:text-6xl font-serif font-bold text-text-primary">
-                        What my <span className="text-cyan">clients</span> say.
+                        What our <span className="text-cyan">clients</span> say.
                     </h2>
                 </div>
 

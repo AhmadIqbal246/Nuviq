@@ -12,9 +12,9 @@ export default function Navbar() {
 
     const navLinks = [
         { name: "About", href: "#about" },
-        { name: "Skills", href: "#skills" },
-        { name: "Projects", href: "#projects" },
-        { name: "Experience", href: "#experience" },
+        { name: "Services", href: "#skills" },
+        { name: "Our Work", href: "#projects" },
+        { name: "Why Us", href: "#experience" },
         { name: "Contact", href: "#contact" },
     ];
 
@@ -46,8 +46,8 @@ export default function Navbar() {
             animate="animate"
             variants={navVariants}
             className={`fixed top-0 left-0 w-full z-[1000] px-6 lg:px-16 transition-all duration-500 ease-in-out ${isScrolled
-                    ? "py-4 glass border-b border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.3)]"
-                    : "py-10 bg-transparent"
+                ? "py-4 glass border-b border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.3)]"
+                : "py-10 bg-transparent"
                 }`}
         >
             <div className="max-w-[1800px] mx-auto flex items-center justify-between">
@@ -59,11 +59,11 @@ export default function Navbar() {
                         className="flex items-center gap-3 group"
                     >
                         <div className="relative w-10 h-10 rounded-xl bg-gradient-accent flex items-center justify-center font-bold text-xl shadow-glow overflow-hidden transition-all duration-500 group-hover:shadow-[0_0_30px_#6c63ff]">
-                            <span className="relative z-10">A</span>
+                            <span className="relative z-10">N</span>
                             <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                         </div>
                         <span className="font-serif text-2xl font-bold tracking-tighter text-text-primary group-hover:text-cyan transition-colors duration-300 uppercase">
-                            Ahmad
+                            NovaSoft
                         </span>
                     </motion.div>
                 </Link>
@@ -91,7 +91,7 @@ export default function Navbar() {
                     <MagneticButton>
                         <Link href="#contact">
                             <button className="relative py-3.5 px-10 rounded-full bg-gradient-accent text-[11px] font-bold uppercase tracking-[0.15em] shadow-glow hover:shadow-[0_0_40px_rgba(108,99,255,0.4)] transition-all duration-500 group overflow-hidden">
-                                <span className="relative z-10">Get in Touch</span>
+                                <span className="relative z-10">Get a Free Quote</span>
                                 <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
                             </button>
                         </Link>

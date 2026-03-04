@@ -26,10 +26,10 @@ export default function Experience() {
             <div className="container mx-auto px-6 lg:px-12">
                 <div className="flex flex-col gap-6 mb-24 items-center justify-center text-center">
                     <FadeIn direction="down" delay={0.2} distance={20}>
-                        <span className="text-violet font-mono text-sm tracking-widest uppercase">// MY JOURNEY</span>
+                        <span className="text-violet font-mono text-sm tracking-widest uppercase">// WHY CHOOSE US</span>
                     </FadeIn>
                     <h2 className="text-4xl md:text-6xl font-serif font-bold text-text-primary">
-                        Professional <span className="text-cyan">Experience</span>.
+                        Our Proven <span className="text-cyan">Track Record</span>.
                     </h2>
                 </div>
 

@@ -1,4 +1,4 @@
-import { Inter, Playfair_Display, JetBrains_Mono } from 'next/font/google';
+import { Inter, Playfair_Display, JetBrains_Mono, Space_Grotesk } from 'next/font/google';
 
 export const inter = Inter({
     subsets: ['latin'],
@@ -15,5 +15,11 @@ export const playfair = Playfair_Display({
 export const jetbrains = JetBrains_Mono({
     subsets: ['latin'],
     variable: '--font-jetbrains',
+    display: 'swap',
+});
+
+export const spaceGrotesk = Space_Grotesk({
+    subsets: ['latin'],
+    variable: '--font-space',
     display: 'swap',
 });

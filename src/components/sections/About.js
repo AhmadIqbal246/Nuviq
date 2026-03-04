@@ -18,9 +18,9 @@ export default function About() {
     const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
 
     const stats = [
-        { label: "Years Experience", value: 5, suffix: "+" },
-        { label: "Projects Completed", value: 30, suffix: "+" },
-        { label: "Happy Clients", value: 20, suffix: "" },
+        { label: "Years in Business", value: 5, suffix: "+" },
+        { label: "Projects Delivered", value: 50, suffix: "+" },
+        { label: "Happy Clients", value: 30, suffix: "+" },
     ];
 
     return (
@@ -30,19 +30,19 @@ export default function About() {
                 <div className="flex flex-col gap-10">
                     <div className="flex items-center gap-4">
                         <div className="w-12 h-[2px] bg-gradient-accent" />
-                        <span className="text-violet font-mono text-sm tracking-widest uppercase">// ABOUT ME</span>
+                        <span className="text-violet font-mono text-sm tracking-widest uppercase">// WHO WE ARE</span>
                     </div>
 
                     <h2 className="text-4xl md:text-6xl font-serif font-bold text-text-primary leading-tight">
-                        I craft <span className="text-violet">immersive</span> digital solutions that drive results.
+                        We craft <span className="text-violet">intelligent</span> digital solutions that drive results.
                     </h2>
 
                     <div className="flex flex-col gap-6 text-muted text-lg leading-relaxed max-w-xl">
                         <p>
-                            Based in the digital realm, I specialize in building highly performant and visually stunning web applications. My approach combines technical precision with creative flair.
+                            NovaSoft is a full-service IT company specializing in building highly performant web applications and AI-powered solutions. Our approach combines technical precision with creative innovation.
                         </p>
                         <p>
-                            With a background in both development and design, I create seamless user experiences that not only look good but operate flawlessly under the hood.
+                            With a team of skilled developers, designers, and AI engineers, we create seamless digital experiences that not only look stunning but deliver real business impact.
                         </p>
                     </div>
 

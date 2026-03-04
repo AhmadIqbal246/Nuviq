@@ -24,21 +24,22 @@ export default function Footer() {
                                 whileHover={{ scale: 1.05 }}
                             >
                                 <div className="w-12 h-12 rounded-xl bg-gradient-accent flex items-center justify-center font-bold text-xl shadow-glow">
-                                    A
+                                    N
                                 </div>
                                 <span className="font-serif text-3xl font-bold tracking-tight text-white group-hover:text-cyan transition-colors">
-                                    AHMAD
+                                    NOVASOFT
                                 </span>
                             </motion.div>
                         </Link>
                         <p className="text-muted text-lg max-w-sm">
-                            Designing digital experiences that bridge the gap between imagination and implementation.
+                            Engineering digital ecosystems that transform businesses through AI and modern web solutions.
                         </p>
                     </div>
 
                     <div className="flex gap-12 text-sm font-mono uppercase tracking-widest text-muted">
                         <Link href="#about" className="hover:text-violet transition-colors">About</Link>
-                        <Link href="#projects" className="hover:text-cyan transition-colors">Projects</Link>
+                        <Link href="#skills" className="hover:text-cyan transition-colors">Services</Link>
+                        <Link href="#projects" className="hover:text-cyan transition-colors">Our Work</Link>
                         <Link href="#contact" className="hover:text-white transition-colors">Contact</Link>
                     </div>
 
@@ -56,7 +57,7 @@ export default function Footer() {
                 {/* Bottom Section */}
                 <div className="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-white/5 gap-6">
                     <p className="text-muted font-mono text-xs">
-                        © {new Date().getFullYear()} AHMAD. ALL RIGHTS RESERVED.
+                        © {new Date().getFullYear()} NOVASOFT. ALL RIGHTS RESERVED.
                     </p>
                     <p className="text-muted font-mono text-xs invisible md:visible">
                         BUILT WITH NEXT.JS 14 × FRAMER MOTION × GSAP
@@ -75,7 +76,7 @@ export default function Footer() {
 
             {/* Background Text */}
             <h2 className="absolute -bottom-10 left-1/2 -translate-x-1/2 text-[20vw] font-serif font-black text-white/[0.02] pointer-events-none select-none">
-                PORTFOLIO
+                NOVASOFT
             </h2>
         </footer>
     );

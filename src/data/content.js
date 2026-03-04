@@ -1,54 +1,54 @@
 /**
- * Centralized content data for the portfolio.
+ * Centralized content data for the NovaSoft company website.
  * Keep large text arrays, project details, and experience entries here to keep components clean.
  */
 
 export const experiences = [
     {
-        company: "Future Tech Solutions",
-        role: "Senior Frontend Engineer",
-        date: "2022 - Present",
-        desc: "Led the development of complex React-based dashboards and design systems. Optimized performance by 40% using advanced caching and code splitting.",
+        company: "Enterprise AI Platform",
+        role: "AI-Powered Analytics Dashboard",
+        date: "2024 - Present",
+        desc: "Built a real-time analytics dashboard powered by machine learning models. Reduced client decision-making time by 40% with intelligent data visualizations and predictive insights.",
     },
     {
-        company: "Creative Vision Agency",
-        role: "UI/UX Designer & Developer",
-        date: "2020 - 2022",
-        desc: "Designed and implemented interactive landing pages and e-commerce platforms. Specialized in high-end Framer Motion and GSAP animations.",
+        company: "E-Commerce Revolution",
+        role: "Full-Stack Web Application",
+        date: "2023 - 2024",
+        desc: "Designed and developed a high-performance e-commerce platform handling 100K+ daily users. Integrated AI-driven product recommendations that increased conversions by 35%.",
     },
     {
-        company: "Start-up Innovation Hub",
-        role: "Frontend Developer",
-        date: "2018 - 2020",
-        desc: "Collaborated on various MVPs for tech startups. Built responsive web applications using Vue and Next.js.",
+        company: "FinTech Startup",
+        role: "Custom Software Solution",
+        date: "2022 - 2023",
+        desc: "Delivered a secure, scalable financial management platform for a Series A startup. Automated 80% of manual reporting processes through custom integrations.",
     },
 ];
 
 export const projects = [
     {
         id: 1,
-        title: "E-Commerce Experience",
-        image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1974&auto=format&fit=crop",
-        category: "frontend",
-        tags: ["React", "Custom Hook", "Redux"],
+        title: "AI Analytics Dashboard",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+        category: "fullstack",
+        tags: ["React", "Python", "AI/ML"],
         github: "https://github.com",
         live: "https://live.com",
     },
     {
         id: 2,
-        title: "Creative Portfolio Design",
-        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop",
+        title: "E-Commerce Platform",
+        image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1974&auto=format&fit=crop",
         category: "fullstack",
-        tags: ["Next.js", "Framer Motion", "GSAP"],
+        tags: ["Next.js", "Node.js", "Stripe"],
         github: "https://github.com",
         live: "https://live.com",
     },
     {
         id: 3,
-        title: "Real-time Dashboard",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-        category: "backend",
-        tags: ["Node.js", "Socket.io", "MongoDB"],
+        title: "SaaS Management Tool",
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop",
+        category: "frontend",
+        tags: ["React", "Tailwind", "Firebase"],
         github: "https://github.com",
         live: "https://live.com",
     },
