@@ -6,26 +6,7 @@ import FadeIn from "@/components/animations/FadeIn";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-const experiences = [
-    {
-        company: "Future Tech Solutions",
-        role: "Senior Frontend Engineer",
-        date: "2022 - Present",
-        desc: "Led the development of complex React-based dashboards and design systems. Optimized performance by 40% using advanced caching and code splitting.",
-    },
-    {
-        company: "Creative Vision Agency",
-        role: "UI/UX Designer & Developer",
-        date: "2020 - 2022",
-        desc: "Designed and implemented interactive landing pages and e-commerce platforms. Specialized in high-end Framer Motion and GSAP animations.",
-    },
-    {
-        company: "Start-up Innovation Hub",
-        role: "Frontend Developer",
-        date: "2018 - 2020",
-        desc: "Collaborated on various MVPs for tech startups. Built responsive web applications using Vue and Next.js.",
-    },
-];
+import { experiences } from "@/data/content";
 
 export default function Experience() {
     const containerRef = useRef(null);

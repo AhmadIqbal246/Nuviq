@@ -8,23 +8,16 @@ import TextReveal from "@/components/animations/TextReveal";
 import MagneticButton from "@/components/animations/MagneticButton";
 import gsap from "gsap";
 
-import { useBigBang } from "@/hooks/useBigBang";
-
 import BlackHoleBackground from "@/components/three/BlackHoleBackground";
-import OrbAI from "@/components/three/OrbAI";
+import AIChatbot from "@/components/three/AIChatbot";
 
 export default function Hero() {
     const [mounted, setMounted] = useState(false);
     useEffect(() => { setMounted(true); }, []);
 
-    const { hasPlayed } = useBigBang();
     const [role, setRole] = useState("Creative Coder");
     const roles = ["Creative Coder", "UI Architect", "Motion Designer", "3D Enthusiast"];
     const roleIndex = useRef(0);
-
-    const animationProps = hasPlayed
-        ? {}
-        : { initial: { opacity: 0 }, animate: { opacity: 1 }, transition: { delay: 5.5, duration: 1 } };
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -39,18 +32,17 @@ export default function Hero() {
             {/* LAYER 0 — Black Hole Fullscreen Background (z: 0) */}
             {mounted && <BlackHoleBackground />}
 
-            {/* LAYER 1 — Orb AI (left side, z: 2) */}
-            {mounted && <OrbAI />}
+            {/* LAYER 1 — AI Chatbot (z: 2) */}
+            {mounted && <AIChatbot />}
 
             {/* LAYER 2 — Hero Content (center-left, z: 10) */}
             <motion.div
-                {...animationProps}
                 className="container mx-auto px-6 lg:px-12 flex relative z-10"
             >
                 <div className="flex flex-col lg:flex-row items-center justify-center min-h-screen w-full">
                     {/* Content 2/3 (now on left) */}
                     <div className="w-full lg:w-2/3 flex flex-col gap-6 pr-0 lg:pr-12 items-center lg:items-start text-center lg:text-left">
-                        <FadeIn direction="down" delay={hasPlayed ? 0.2 : 0} distance={20} className="flex justify-center lg:justify-start">
+                        <FadeIn direction="down" delay={0.2} distance={20} className="flex justify-center lg:justify-start">
                             <span className="inline-block py-2 px-4 rounded-full bg-violet/10 border border-violet/20 text-violet font-mono text-sm">
                                 // WELCOME TO MY UNIVERSE
                             </span>
@@ -76,7 +68,7 @@ export default function Hero() {
                         <TextReveal
                             text="Designing digital experiences that bridge the gap between imagination and implementation. Specializing in high-end interfaces and interactive motion."
                             className="text-muted text-base md:text-lg max-w-lg text-center lg:text-left mx-auto lg:mx-0"
-                            delay={hasPlayed ? 0.5 : 0}
+                            delay={0.5}
                         />
 
                         <div className="flex flex-wrap gap-4 md:gap-6 mt-6 justify-center lg:justify-start">

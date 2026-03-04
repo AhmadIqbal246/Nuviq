@@ -11,35 +11,7 @@ const navLinks = [
     { name: "Fullstack", href: "#fullstack" },
 ];
 
-const projects = [
-    {
-        id: 1,
-        title: "E-Commerce Experience",
-        image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1974&auto=format&fit=crop",
-        category: "frontend",
-        tags: ["React", "Custom Hook", "Redux"],
-        github: "https://github.com",
-        live: "https://live.com",
-    },
-    {
-        id: 2,
-        title: "Creative Portfolio Design",
-        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop",
-        category: "fullstack",
-        tags: ["Next.js", "Framer Motion", "GSAP"],
-        github: "https://github.com",
-        live: "https://live.com",
-    },
-    {
-        id: 3,
-        title: "Real-time Dashboard",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-        category: "backend",
-        tags: ["Node.js", "Socket.io", "MongoDB"],
-        github: "https://github.com",
-        live: "https://live.com",
-    },
-];
+import { projects } from "@/data/content";
 
 export default function Projects() {
     const [filter, setFilter] = useState("all");

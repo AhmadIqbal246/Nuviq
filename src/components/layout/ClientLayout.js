@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import dynamic from "next/dynamic";
 import SmoothScrollProvider from "@/components/common/SmoothScrollProvider";
 import ScrollProgressBar from "@/components/common/ScrollProgressBar";
 import NoiseOverlay from "@/components/common/NoiseOverlay";
