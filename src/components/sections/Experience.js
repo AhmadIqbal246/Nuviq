@@ -22,7 +22,7 @@ export default function Experience() {
     });
 
     return (
-        <section id="experience" ref={containerRef} className="py-32 bg-deep overflow-hidden">
+        <section id="experience" ref={containerRef} className="py-32 bg-transparent overflow-hidden">
             <div className="container mx-auto px-6 lg:px-12">
                 <div className="flex flex-col gap-6 mb-24 items-center justify-center text-center">
                     <FadeIn direction="down" delay={0.2} distance={20}>

@@ -8,10 +8,8 @@ import TextReveal from "@/components/animations/TextReveal";
 import MagneticButton from "@/components/animations/MagneticButton";
 import gsap from "gsap";
 
-import Particles from "@/components/three/Particles";
 import AIChatbot from "@/components/three/AIChatbot";
 
-const DynamicParticles = dynamic(() => Promise.resolve(Particles), { ssr: false });
 const DynamicChatbot = dynamic(() => Promise.resolve(AIChatbot), { ssr: false });
 
 export default function Hero() {
@@ -31,29 +29,7 @@ export default function Hero() {
     }, []);
 
     return (
-        <section className="relative min-h-[100vh] flex flex-col justify-center overflow-hidden bg-[#080808]">
-
-            {/* LAYER -1 — CSS Gradient Mesh (Deepest, GPU-only) */}
-            <div className="absolute inset-0 z-[-1] overflow-hidden">
-                <div className="gradient-mesh-blob gradient-mesh-blob--violet" />
-                <div className="gradient-mesh-blob gradient-mesh-blob--cyan" />
-                <div className="gradient-mesh-blob gradient-mesh-blob--deep" />
-            </div>
-
-            {/* LAYER 0 — React Bits Particles Background (z: 0) */}
-            <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
-                {mounted && <DynamicParticles
-                    particleColors={["#ffffff", "#6C63FF", "#00F2FF"]}
-                    particleCount={200}
-                    particleSpread={10}
-                    speed={0.1}
-                    particleBaseSize={100}
-                    moveParticlesOnHover
-                    alphaParticles={false}
-                    disableRotation={false}
-                    pixelRatio={1}
-                />}
-            </div>
+        <section className="relative min-h-[100vh] flex flex-col justify-center overflow-hidden bg-transparent">
 
             {/* LAYER 1 — AI Chatbot (z: 2) */}
             {mounted && <DynamicChatbot />}
@@ -80,11 +56,9 @@ export default function Hero() {
                         </FadeIn>
 
                         <div className="flex flex-col gap-2 items-center lg:items-start text-center lg:text-left">
-                            <h1 className="text-4xl md:text-7xl font-serif font-bold text-text-primary leading-tight">
+                            <h1 className="text-4xl md:text-7xl font-serif font-bold leading-tight gradient-text-animated">
                                 Transform Your Business{" "}
-                                <span className="hover:text-gradient-accent transition-colors duration-500">
-                                    with AI & Web Solutions.
-                                </span>
+                                with AI & Web Solutions.
                             </h1>
                             <div className="h-12 overflow-hidden mt-2">
                                 <motion.p

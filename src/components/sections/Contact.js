@@ -18,7 +18,7 @@ export default function Contact() {
     };
 
     return (
-        <section id="contact" className="py-32 bg-deep overflow-hidden relative">
+        <section id="contact" className="py-32 bg-transparent overflow-hidden relative">
             {/* Decorative Blobs */}
             <div className="absolute top-[20%] left-[-10%] w-[600px] h-[600px] bg-violet/10 blur-[150px] -z-1" />
             <div className="absolute bottom-[20%] right-[-10%] w-[500px] h-[500px] bg-cyan/10 blur-[150px] -z-1" />

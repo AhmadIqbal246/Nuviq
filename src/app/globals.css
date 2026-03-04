@@ -259,3 +259,36 @@ code,
       rgba(255, 255, 255, 0.03) 4px);
   animation: crtScanline 0.1s linear infinite;
 }
+
+/* ═══════════════════════════════════════════════
+   Animated Gradient Text
+   Smooth color-shifting text effect (GPU-only)
+   ═══════════════════════════════════════════════ */
+
+@keyframes gradientTextShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-text-animated {
+  background: linear-gradient(270deg,
+      #6c63ff,
+      #00d9ff,
+      #ffffff,
+      #00d9ff,
+      #6c63ff);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientTextShift 6s ease-in-out infinite;
+}

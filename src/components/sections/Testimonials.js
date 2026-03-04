@@ -33,7 +33,7 @@ export default function Testimonials() {
     const prev = () => setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
     return (
-        <section id="testimonials" className="py-32 bg-base overflow-hidden">
+        <section id="testimonials" className="py-32 bg-transparent overflow-hidden">
             <div className="container mx-auto px-6 lg:px-12">
                 <div className="flex flex-col gap-6 mb-24 items-center justify-center text-center">
                     <FadeIn direction="down" delay={0.2} distance={20}>

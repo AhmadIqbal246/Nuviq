@@ -31,7 +31,7 @@ export default function Skills() {
     const filteredSkills = skills.filter(skill => skill.category === activeTab);
 
     return (
-        <section id="skills" className="py-32 bg-deep overflow-hidden">
+        <section id="skills" className="py-32 bg-transparent overflow-hidden">
             <div className="container mx-auto px-6 lg:px-12">
                 <div className="flex flex-col gap-6 mb-20 items-center justify-center text-center">
                     <FadeIn direction="down" delay={0.2} distance={20}>

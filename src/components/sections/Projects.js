@@ -21,7 +21,7 @@ export default function Projects() {
     );
 
     return (
-        <section id="projects" className="py-32 bg-base">
+        <section id="projects" className="py-32 bg-transparent">
             <div className="container mx-auto px-6 lg:px-12">
                 <div className="flex flex-col gap-6 mb-20">
                     <FadeIn direction="down" delay={0.2} distance={20}>

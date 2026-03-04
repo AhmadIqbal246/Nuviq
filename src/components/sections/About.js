@@ -24,7 +24,7 @@ export default function About() {
     ];
 
     return (
-        <section id="about" ref={containerRef} className="relative py-32 bg-base overflow-hidden">
+        <section id="about" ref={containerRef} className="relative py-32 bg-transparent overflow-hidden">
             <div className="container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                 {/* Left Column - Text */}
                 <div className="flex flex-col gap-10">
