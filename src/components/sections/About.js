@@ -77,6 +77,7 @@ export default function About() {
                         <img
                             src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop"
                             alt="Profile"
+                            loading="lazy"
                             className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
                         />
                     </motion.div>

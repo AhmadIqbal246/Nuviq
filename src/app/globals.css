@@ -134,3 +134,128 @@ code,
   opacity: 0.08;
   animation: aurora 20s infinite alternate-reverse;
 }
+
+/* ═══════════════════════════════════════════════
+   CSS Gradient Mesh — Floating Glow Orbs
+   GPU-accelerated, zero JS overhead
+   ═══════════════════════════════════════════════ */
+
+@keyframes gradientMeshFloat1 {
+  0% {
+    transform: translate(0%, 0%) scale(1);
+  }
+
+  33% {
+    transform: translate(15%, -20%) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-10%, 15%) scale(0.95);
+  }
+
+  100% {
+    transform: translate(0%, 0%) scale(1);
+  }
+}
+
+@keyframes gradientMeshFloat2 {
+  0% {
+    transform: translate(0%, 0%) scale(1);
+  }
+
+  33% {
+    transform: translate(-20%, 10%) scale(1.15);
+  }
+
+  66% {
+    transform: translate(10%, -15%) scale(0.9);
+  }
+
+  100% {
+    transform: translate(0%, 0%) scale(1);
+  }
+}
+
+@keyframes gradientMeshFloat3 {
+  0% {
+    transform: translate(0%, 0%) scale(1);
+  }
+
+  33% {
+    transform: translate(10%, 20%) scale(1.05);
+  }
+
+  66% {
+    transform: translate(-15%, -10%) scale(1.1);
+  }
+
+  100% {
+    transform: translate(0%, 0%) scale(1);
+  }
+}
+
+.gradient-mesh-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  will-change: transform;
+}
+
+.gradient-mesh-blob--violet {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(108, 99, 255, 0.35) 0%, transparent 70%);
+  top: -10%;
+  left: -5%;
+  animation: gradientMeshFloat1 18s ease-in-out infinite;
+}
+
+.gradient-mesh-blob--cyan {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(0, 217, 255, 0.25) 0%, transparent 70%);
+  bottom: -15%;
+  right: -5%;
+  animation: gradientMeshFloat2 22s ease-in-out infinite;
+}
+
+.gradient-mesh-blob--deep {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(26, 26, 46, 0.6) 0%, transparent 70%);
+  top: 40%;
+  left: 35%;
+  animation: gradientMeshFloat3 25s ease-in-out infinite;
+}
+
+/* ═══════════════════════════════════════════════
+   CRT Scanline Overlay 
+   Ultra-subtle retro-futuristic texture
+   ═══════════════════════════════════════════════ */
+
+@keyframes crtScanline {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(4px);
+  }
+}
+
+.crt-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.04;
+  background: repeating-linear-gradient(0deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.03) 2px,
+      rgba(255, 255, 255, 0.03) 4px);
+  animation: crtScanline 0.1s linear infinite;
+}

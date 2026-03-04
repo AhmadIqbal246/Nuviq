@@ -75,6 +75,7 @@ function ProjectCard({ project, index }) {
             <motion.img
                 src={project.image}
                 alt={project.title}
+                loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0"
             />
 

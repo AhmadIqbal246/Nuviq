@@ -68,6 +68,7 @@ export default function Testimonials() {
                                             <img
                                                 src={testimonials[active].avatar}
                                                 alt={testimonials[active].name}
+                                                loading="lazy"
                                                 className="w-full h-full object-cover rounded-full"
                                             />
                                         </div>

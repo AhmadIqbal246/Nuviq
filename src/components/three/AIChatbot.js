@@ -42,7 +42,7 @@ function RoboModel() {
                         width: '100%',
                         height: '100%',
                         background: 'transparent',
-                        filter: 'drop-shadow(0 0 20px rgba(0, 242, 255, 0.4))'
+                        filter: 'drop-shadow(0 0 30px rgba(0, 242, 255, 0.5)) drop-shadow(0 0 60px rgba(108, 99, 255, 0.3))'
                     }}
                 />
             </div>
@@ -84,14 +84,15 @@ function ChatbotScene() {
 export default function AIChatbot() {
     return (
         <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+            initial={{ opacity: 0, x: 300 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
             className="absolute inset-0 w-full h-full z-[2] pointer-events-none overflow-hidden bg-transparent"
         >
             <Canvas
+                dpr={[1, 1.5]}
                 camera={{ position: [0, 0, 5], fov: 50 }}
-                gl={{ alpha: true, antialias: true }}
+                gl={{ alpha: true, antialias: true, powerPreference: "high-performance" }}
                 className="bg-transparent pointer-events-auto"
             >
                 <ambientLight intensity={0.5} />

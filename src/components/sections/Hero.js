@@ -8,8 +8,11 @@ import TextReveal from "@/components/animations/TextReveal";
 import MagneticButton from "@/components/animations/MagneticButton";
 import gsap from "gsap";
 
-import BlackHoleBackground from "@/components/three/BlackHoleBackground";
+import Particles from "@/components/three/Particles";
 import AIChatbot from "@/components/three/AIChatbot";
+
+const DynamicParticles = dynamic(() => Promise.resolve(Particles), { ssr: false });
+const DynamicChatbot = dynamic(() => Promise.resolve(AIChatbot), { ssr: false });
 
 export default function Hero() {
     const [mounted, setMounted] = useState(false);
@@ -29,11 +32,34 @@ export default function Hero() {
 
     return (
         <section className="relative min-h-[100vh] flex flex-col justify-center overflow-hidden bg-[#080808]">
-            {/* LAYER 0 — Black Hole Fullscreen Background (z: 0) */}
-            {mounted && <BlackHoleBackground />}
+
+            {/* LAYER -1 — CSS Gradient Mesh (Deepest, GPU-only) */}
+            <div className="absolute inset-0 z-[-1] overflow-hidden">
+                <div className="gradient-mesh-blob gradient-mesh-blob--violet" />
+                <div className="gradient-mesh-blob gradient-mesh-blob--cyan" />
+                <div className="gradient-mesh-blob gradient-mesh-blob--deep" />
+            </div>
+
+            {/* LAYER 0 — React Bits Particles Background (z: 0) */}
+            <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
+                {mounted && <DynamicParticles
+                    particleColors={["#ffffff", "#6C63FF", "#00F2FF"]}
+                    particleCount={200}
+                    particleSpread={10}
+                    speed={0.1}
+                    particleBaseSize={100}
+                    moveParticlesOnHover
+                    alphaParticles={false}
+                    disableRotation={false}
+                    pixelRatio={1}
+                />}
+            </div>
 
             {/* LAYER 1 — AI Chatbot (z: 2) */}
-            {mounted && <AIChatbot />}
+            {mounted && <DynamicChatbot />}
+
+            {/* CRT Scanline Overlay (Top of everything, pointer-events: none) */}
+            <div className="crt-overlay" />
 
             {/* LAYER 2 — Hero Content (center-left, z: 10) */}
             <motion.div
