@@ -126,7 +126,7 @@ function OrbCore({ orbState }) {
 
     return (
         <mesh ref={meshRef}>
-            <icosahedronGeometry args={[0.8, 6]} />
+            <icosahedronGeometry args={[0.8, 3]} />
             <OrbMaterial orbState={orbState} />
         </mesh>
     );
