@@ -49,11 +49,6 @@ export default function Hero() {
                         transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
                         className="w-full lg:w-2/3 flex flex-col gap-6 pr-0 lg:pr-12 items-center lg:items-start text-center lg:text-left relative z-20"
                     >
-                        <FadeIn direction="down" delay={0.2} distance={20} className="flex justify-center lg:justify-start">
-                            <span className="inline-block py-2 px-4 rounded-full bg-violet/10 border border-violet/20 text-violet font-mono text-sm">
-                                NOVASOFT — IT SOLUTIONS
-                            </span>
-                        </FadeIn>
 
                         <div className="flex flex-col gap-4 items-center lg:items-start text-center lg:text-left w-full">
                             <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-[1.1] mb-2 tracking-tight">

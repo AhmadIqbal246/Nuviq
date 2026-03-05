@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, Github } from "lucide-react";
+import { ArrowUpRight, Github, Globe } from "lucide-react";
+import Link from "next/link";
 import FadeIn from "@/components/animations/FadeIn";
 
 const navLinks = [
@@ -76,7 +77,7 @@ function ProjectCard({ project, index }) {
                 src={project.image}
                 alt={project.title}
                 loading="lazy"
-                className="absolute inset-0 w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0"
+                className="absolute inset-0 w-full h-full object-contain p-4 transition-all duration-700 group-hover:scale-105"
             />
 
             {/* Overlay */}
@@ -96,15 +97,22 @@ function ProjectCard({ project, index }) {
                     {project.title}
                 </h3>
 
-                <div className="flex items-center gap-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
-                    <a href={project.live} target="_blank" className="flex items-center gap-2 text-violet hover:text-cyan transition-colors text-sm font-bold tracking-widest uppercase">
-                        Live View <ArrowUpRight size={16} />
-                    </a>
-                    <a href={project.github} target="_blank" className="flex items-center gap-2 text-muted hover:text-text-primary transition-colors text-sm font-bold tracking-widest uppercase">
-                        Source <Github size={16} />
+                <div className="flex items-center gap-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200 relative z-20">
+                    <Link href={`/projects/${project.slug}`} className="flex items-center gap-2 text-violet hover:text-cyan transition-colors text-xs font-bold tracking-widest uppercase">
+                        Case Study <ArrowUpRight size={16} />
+                    </Link>
+                    <a href={project.live} target="_blank" className="flex items-center gap-2 text-muted hover:text-text-primary transition-colors text-[10px] font-bold tracking-widest uppercase">
+                        Live <Globe size={14} />
                     </a>
                 </div>
             </div>
+
+            {/* Full Card Link Overlay */}
+            <Link
+                href={`/projects/${project.slug}`}
+                className="absolute inset-0 z-10"
+                aria-label={`View ${project.title} Case Study`}
+            />
 
             {/* Hover Light Effect */}
             <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-[radial-gradient(circle_at_var(--mouse-x)_var(--mouse-y),rgba(108,99,255,0.15)_0%,transparent_70%)]"
