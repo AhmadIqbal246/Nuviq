@@ -62,7 +62,7 @@ export default function Footer() {
                     <div className="flex flex-col gap-6">
                         <h4 className="text-white font-bold uppercase tracking-widest text-xs">Services</h4>
                         <div className="flex flex-col gap-4 text-muted text-sm">
-                            <Link href="#skills" className="hover:text-cyan transition-colors">AI & RAG Systems</Link>
+                            <Link href="/services" className="hover:text-cyan transition-colors">AI & RAG Systems</Link>
                             <Link href="#skills" className="hover:text-cyan transition-colors">Web Development</Link>
                             <Link href="#skills" className="hover:text-cyan transition-colors">SaaS Solutions</Link>
                             <Link href="#skills" className="hover:text-cyan transition-colors">Cloud Architecture</Link>
@@ -73,7 +73,8 @@ export default function Footer() {
                     <div className="flex flex-col gap-6">
                         <h4 className="text-white font-bold uppercase tracking-widest text-xs">Company</h4>
                         <div className="flex flex-col gap-4 text-muted text-sm">
-                            <Link href="#about" className="hover:text-violet transition-colors">About Us</Link>
+                            <Link href="/about" className="hover:text-violet transition-colors">About Us</Link>
+                            <Link href="/team" className="hover:text-violet transition-colors">Our Team</Link>
                             <Link href="#projects" className="hover:text-violet transition-colors">Our Work</Link>
                             <Link href="#faq" className="hover:text-violet transition-colors">FAQs</Link>
                             <Link href="#contact" className="hover:text-violet transition-colors">Contact</Link>

@@ -29,7 +29,7 @@ export default function Hero() {
     }, []);
 
     return (
-        <section className="relative min-h-[100vh] flex flex-col justify-center overflow-hidden bg-transparent">
+        <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-transparent py-20 lg:py-0">
 
             {/* LAYER 1 — AI Chatbot (z: 2) */}
             {mounted && <DynamicChatbot />}
@@ -39,7 +39,7 @@ export default function Hero() {
 
             {/* LAYER 2 — Hero Content (center-left, z: 10) */}
             <motion.div
-                className="container mx-auto px-6 lg:px-12 flex relative z-10"
+                className="container mx-auto px-6 lg:px-12 flex relative z-10 pt-20 lg:pt-0"
             >
                 <div className="flex flex-col lg:flex-row items-center justify-center min-h-screen w-full">
                     {/* Content 2/3 — slides in from left */}
@@ -47,7 +47,7 @@ export default function Hero() {
                         initial={{ opacity: 0, x: -200 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-                        className="w-full lg:w-2/3 flex flex-col gap-6 pr-0 lg:pr-12 items-center lg:items-start text-center lg:text-left"
+                        className="w-full lg:w-2/3 flex flex-col gap-6 pr-0 lg:pr-12 items-center lg:items-start text-center lg:text-left relative z-20"
                     >
                         <FadeIn direction="down" delay={0.2} distance={20} className="flex justify-center lg:justify-start">
                             <span className="inline-block py-2 px-4 rounded-full bg-violet/10 border border-violet/20 text-violet font-mono text-sm">
@@ -55,19 +55,20 @@ export default function Hero() {
                             </span>
                         </FadeIn>
 
-                        <div className="flex flex-col gap-2 items-center lg:items-start text-center lg:text-left">
-                            <h1 className="text-4xl md:text-7xl font-serif font-bold leading-tight gradient-text-animated">
-                                Transform Your Business{" "}
-                                with AI & Web Solutions.
+                        <div className="flex flex-col gap-4 items-center lg:items-start text-center lg:text-left w-full">
+                            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-[1.1] mb-2 tracking-tight">
+                                <span className="text-cyan block">Transform Your</span>
+                                <span className="text-white block">Business with AI</span>
+                                <span className="gradient-text-animated block">& Web Solutions.</span>
                             </h1>
-                            <div className="h-12 overflow-hidden mt-2">
+                            <div className="h-10 md:h-12 overflow-hidden mt-2">
                                 <motion.p
                                     key={role}
                                     initial={{ y: 20, opacity: 0 }}
                                     animate={{ y: 0, opacity: 1 }}
                                     exit={{ y: -20, opacity: 0 }}
                                     style={{ fontFamily: 'var(--font-space)' }}
-                                    className="text-2xl md:text-3xl text-cyan font-bold tracking-wide"
+                                    className="text-xl md:text-3xl text-cyan font-bold tracking-wide"
                                 >
                                     {role}
                                 </motion.p>

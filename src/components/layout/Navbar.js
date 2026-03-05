@@ -11,8 +11,10 @@ export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const navLinks = [
-        { name: "About", href: "#about" },
-        { name: "Services", href: "#skills" },
+        { name: "Home", href: "/" },
+        { name: "About", href: "/about" },
+        { name: "Our Team", href: "/team" },
+        { name: "Services", href: "/services" },
         { name: "Our Work", href: "#projects" },
         { name: "FAQ", href: "#faq" },
         { name: "Contact", href: "#contact" },
@@ -42,9 +44,6 @@ export default function Navbar() {
 
     return (
         <motion.nav
-            initial="initial"
-            animate="animate"
-            variants={navVariants}
             className={`fixed top-0 left-0 w-full z-[1000] px-6 lg:px-16 transition-all duration-500 ease-in-out ${isScrolled
                 ? "py-4 glass border-b border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.3)]"
                 : "py-10 bg-transparent"
@@ -91,7 +90,7 @@ export default function Navbar() {
                     <MagneticButton>
                         <Link href="#contact">
                             <button className="relative py-3.5 px-10 rounded-full bg-gradient-accent text-[11px] font-bold uppercase tracking-[0.15em] shadow-glow hover:shadow-[0_0_40px_rgba(108,99,255,0.4)] transition-all duration-500 group overflow-hidden">
-                                <span className="relative z-10">Get a Free Quote</span>
+                                <span className="relative z-10">Contact Us</span>
                                 <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
                             </button>
                         </Link>
