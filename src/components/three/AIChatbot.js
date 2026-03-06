@@ -19,11 +19,11 @@ function RoboModel() {
         <Html
             center
             transform
-            distanceFactor={isMobile ? 8 : 6}
+            distanceFactor={isMobile ? 10 : 6}
             position={[0, 0, 0]}
             style={{
-                width: isMobile ? '280px' : '400px',
-                height: isMobile ? '280px' : '400px',
+                width: isMobile ? '220px' : '400px',
+                height: isMobile ? '220px' : '400px',
                 pointerEvents: 'none',
                 userSelect: 'none',
                 display: 'flex',
@@ -60,7 +60,7 @@ function ChatbotScene() {
     const isMobile = viewport.width < 6;
 
     // Position chatbot
-    const position = isMobile ? [0, 1.8, 0] : [2.8, 0, 0];
+    const position = isMobile ? [0, 0.8, 0] : [2.8, 0, 0];
 
     // High-performance floating animation
     useFrame((state) => {
@@ -71,7 +71,7 @@ function ChatbotScene() {
     });
 
     return (
-        <group ref={groupRef} position={position} scale={isMobile ? 0.5 : 0.6}>
+        <group ref={groupRef} position={position} scale={isMobile ? 0.4 : 0.6}>
             <RoboModel />
         </group>
     );
@@ -81,18 +81,22 @@ function ChatbotScene() {
  * Main Export for Hero Section
  * Sets up the Canvas and Entry Transitions.
  */
-export default function AIChatbot() {
+export default function AIChatbot({ className = "", isAbsolute = true }) {
+    const [ready, setReady] = React.useState(false);
+    React.useEffect(() => {
+        setReady(true);
+    }, []);
+
     return (
         <motion.div
-            initial={{ opacity: 0, x: 300 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: isAbsolute ? 100 : 0, y: isAbsolute ? 0 : 20 }}
+            animate={{ opacity: 1, x: 0, y: 0 }}
             transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
-            className="absolute inset-0 w-full h-full z-[2] pointer-events-none overflow-hidden bg-transparent"
+            className={`${isAbsolute ? "absolute inset-0 w-full h-full z-[2]" : "relative w-full h-[320px] sm:h-[450px] z-[2]"} pointer-events-none overflow-hidden bg-transparent ${className}`}
         >
             <Canvas
                 dpr={[1, 1.5]}
-                camera={{ position: [0, 0, 5], fov: 50 }}
-                gl={{ alpha: true, antialias: true, powerPreference: "high-performance" }}
+                camera={{ position: [0, 0, 5], fov: isAbsolute ? 50 : 45 }}
                 className="bg-transparent pointer-events-auto"
             >
                 <ambientLight intensity={0.5} />
@@ -100,15 +104,17 @@ export default function AIChatbot() {
 
                 <ChatbotScene />
 
-                <EffectComposer>
-                    <Bloom
-                        intensity={0.8}
-                        luminanceThreshold={0.1}
-                        luminanceSmoothing={0.9}
-                        radius={0.8}
-                        mipmapBlur
-                    />
-                </EffectComposer>
+                {ready && (
+                    <EffectComposer multisampling={0} disableNormalPass>
+                        <Bloom
+                            intensity={0.8}
+                            luminanceThreshold={0.1}
+                            luminanceSmoothing={0.9}
+                            radius={0.8}
+                            mipmapBlur
+                        />
+                    </EffectComposer>
+                )}
             </Canvas>
         </motion.div>
     );

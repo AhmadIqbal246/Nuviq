@@ -60,19 +60,18 @@ code,
   font-family: var(--font-jetbrains), monospace;
 }
 
-/* Custom Scrollbar */
+/* Hide Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  display: none;
 }
 
-::-webkit-scrollbar-track {
-  background: var(--color-base);
+* {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--gradient-accent);
-  border-radius: 10px;
-}
 
 /* GSAP/Framer Overrides */
 .lenis.lenis-smooth {

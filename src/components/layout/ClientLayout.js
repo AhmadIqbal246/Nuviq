@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import ScrollProgressBar from "@/components/common/ScrollProgressBar";
 import NoiseOverlay from "@/components/common/NoiseOverlay";
+import AIAssistantBot from "@/components/chat/AIAssistantBot";
 
 import Particles from "@/components/three/Particles";
 const DynamicParticles = dynamic(() => Promise.resolve(Particles), { ssr: false });
@@ -42,12 +43,13 @@ export default function ClientLayout({ children }) {
             </div>
 
             {/* CONTENT LAYER */}
-            <div className="relative z-10">
+            <div className="relative z-10 overflow-x-hidden w-full">
                 <ScrollProgressBar visible={true} />
                 <NoiseOverlay />
                 <div style={{ visibility: mounted ? "visible" : "hidden" }}>
                     {children}
                 </div>
+                {mounted && <AIAssistantBot />}
             </div>
         </>
     );
