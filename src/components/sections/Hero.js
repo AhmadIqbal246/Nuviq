@@ -79,14 +79,14 @@ export default function Hero() {
                             delay={0.5}
                         />
 
-                        <div className="flex flex-wrap gap-4 md:gap-6 mt-6 justify-center lg:justify-start">
+                        <div className="flex flex-wrap gap-4 md:gap-6 mt-6 justify-center lg:justify-start items-center">
                             <MagneticButton>
-                                <Link href="/contact" className="py-4 px-10 bg-gradient-accent text-base font-bold rounded-lg shadow-glow hover:scale-105 transition-transform duration-300">
+                                <Link href="/contact" className="inline-flex items-center justify-center h-14 px-10 bg-gradient-accent text-base font-bold rounded-lg shadow-glow hover:scale-105 transition-transform duration-300">
                                     Get a Free Quote
                                 </Link>
                             </MagneticButton>
                             <MagneticButton>
-                                <button className="py-4 px-10 border border-violet text-text-primary font-bold rounded-lg hover:bg-violet/10 transition-colors duration-300">
+                                <button className="inline-flex items-center justify-center h-14 px-10 border border-violet text-text-primary font-bold rounded-lg hover:bg-violet/10 transition-colors duration-300">
                                     Our Services
                                 </button>
                             </MagneticButton>
@@ -103,15 +103,7 @@ export default function Hero() {
                 </div>
             </motion.div>
 
-            <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 2, repeat: Infinity, duration: 2, repeatType: "reverse" }}
-                className="absolute bottom-10 left-12 flex items-center gap-4 text-muted font-mono text-sm hidden lg:flex z-10"
-            >
-                <div className="w-[1px] h-12 bg-muted/30" />
-                <span className="rotate-90 origin-left">SCROLL TO EXPLORE</span>
-            </motion.div>
+
         </section >
     );
 }

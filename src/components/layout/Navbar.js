@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { createPortal } from "react-dom";
+import Image from "next/image";
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -56,8 +57,16 @@ export default function Navbar() {
                 style={{ backgroundColor: '#080808' }}
             >
                 <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-accent flex items-center justify-center font-bold text-xl shadow-glow">
-                        <span className="text-white">N</span>
+                    <div className="relative w-12 h-12 flex items-center justify-center overflow-hidden rounded-xl bg-transparent">
+                        <video
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="object-cover w-full h-full scale-[1.5]"
+                        >
+                            <source src="/Animated Logo/RobotSaludando.webm" type="video/webm" />
+                        </video>
                     </div>
                     <span className="font-serif text-xl font-bold tracking-tighter text-text-primary uppercase">
                         NovaSoft
@@ -105,8 +114,16 @@ export default function Navbar() {
                     {/* LOGO */}
                     <Link href="/">
                         <div className="flex items-center gap-3 group cursor-pointer">
-                            <div className="relative w-10 h-10 rounded-xl bg-gradient-accent flex items-center justify-center font-bold text-xl shadow-glow overflow-hidden">
-                                <span className="relative z-10 text-white">N</span>
+                            <div className="relative w-12 h-12 flex items-center justify-center overflow-hidden rounded-xl bg-transparent transition-transform duration-300 group-hover:scale-105">
+                                <video
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    className="object-cover w-full h-full scale-[1.5]"
+                                >
+                                    <source src="/Animated Logo/RobotSaludando.webm" type="video/webm" />
+                                </video>
                             </div>
                             <span className="font-serif text-2xl font-bold tracking-tighter text-text-primary uppercase">
                                 NovaSoft
