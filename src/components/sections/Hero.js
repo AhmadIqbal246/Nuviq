@@ -31,8 +31,10 @@ export default function Hero() {
     return (
         <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-transparent py-20 lg:py-0">
 
-            {/* LAYER 1 — AI Chatbot (z: 2) */}
-            {mounted && <DynamicChatbot />}
+            {/* DESKTOP ONLY — AI Chatbot as absolute overlay (z: 2) */}
+            <div className="hidden lg:block">
+                {mounted && <DynamicChatbot isAbsolute={true} />}
+            </div>
 
             {/* CRT Scanline Overlay (Top of everything, pointer-events: none) */}
             <div className="crt-overlay" />
@@ -41,7 +43,7 @@ export default function Hero() {
             <motion.div
                 className="container mx-auto px-6 lg:px-12 flex relative z-10 pt-20 lg:pt-0"
             >
-                <div className="flex flex-col lg:flex-row items-center justify-center min-h-screen w-full">
+                <div className="flex flex-col lg:flex-row items-center justify-center lg:min-h-screen w-full">
                     {/* Content 2/3 — slides in from left */}
                     <motion.div
                         initial={{ opacity: 0, x: -200 }}
@@ -54,7 +56,7 @@ export default function Hero() {
                             <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-[1.1] mb-2 tracking-tight">
                                 <span className="text-cyan block">Transform Your</span>
                                 <span className="text-white block">Business with AI</span>
-                                <span className="gradient-text-animated block">& Web Solutions.</span>
+                                <span className="gradient-text-animated block">&amp; Web Solutions.</span>
                             </h1>
                             <div className="h-10 md:h-12 overflow-hidden mt-2">
                                 <motion.p
@@ -92,6 +94,11 @@ export default function Hero() {
 
                     {/* Right spacer — chatbot occupies this space visually on desktop */}
                     <div className="hidden lg:block w-1/3" />
+
+                    {/* MOBILE ONLY — AI Chatbot below content */}
+                    <div className="block lg:hidden w-full mt-10">
+                        {mounted && <DynamicChatbot isAbsolute={false} />}
+                    </div>
                 </div>
             </motion.div>
 

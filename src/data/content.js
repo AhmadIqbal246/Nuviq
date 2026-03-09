@@ -95,5 +95,37 @@ export const projects = [
             "/Safe-Bill/Screenshot 2026-03-05 195803.png",
             "/Safe-Bill/Screenshot 2026-03-05 195822.png"
         ]
+    },
+    {
+        id: 3,
+        slug: "arabic-ai-law",
+        title: "Arabic AI Law",
+        image: "/Arabic Ai Law/Screenshot 2026-03-09 170536.png",
+        category: "fullstack",
+        tags: ["FastAPI", "Django", "Pinecone", "BM25", "Whisper", "React", "JWT", "Stripe", "RAG"],
+        github: "#",
+        live: "http://37.60.228.213:3000/",
+        client: "Saudi Legal Tech",
+        description: "Arabic AI Law is a comprehensive legal ecosystem designed for the Saudi domain, featuring advanced RAG pipelines, multimodal interaction, and intelligent case management.",
+        features: [
+            "Comprehensive Legal AI Ecosystem: Developed a sophisticated, decoupled RAG (Retrieval-Augmented Generation) platform tailored for the Saudi legal domain using FastAPI and Django.",
+            "Advanced RAG Pipeline: Engineered a high-performance search system combining Pinecone vector similarity with BM25 keyword ranking for precise retrieval of Arabic legal articles.",
+            "Multimodal Interaction: Implemented seamless Voice-to-Text processing using OpenAI Whisper, allowing users to submit legal queries via Arabic audio.",
+            "Intelligent Query Enhancement: Integrated specialized AI agents to analyze user intent and generate multiple optimized search queries, ensuring maximum legal domain coverage.",
+            "Robust Authentication & Security: Built a secure user management system using JWT (JSON Web Tokens) and Djoser, featuring mandatory email verification and granular access controls.",
+            "Subscription-Based Monetization: Designed a tiered subscription model with automated Stripe integration, linking feature access to user-specific tier levels (Basic to Ultimate).",
+            "Dynamic AI Configuration: Created an administrative dashboard to manage GPT-4o/GPT-3.5 models and system prompts dynamically without redeploying code.",
+            "Full-Stack Performance: Leveraged a modern React/Redux frontend to provide a responsive, RTL-supported (Right-to-Left) Arabic interface for legal professionals.",
+            "Analytics & Cost Monitoring: Built custom tracking modules to monitor OpenAI API usage and operational costs with detailed daily and monthly reporting.",
+            "Isolated Case Management: Developed a 'Legal Case Workspace' feature, allowing users to organize legal research and AI conversations into distinct, manageable case files."
+        ],
+        images: [
+            "/Arabic Ai Law/Screenshot 2026-03-09 170536.png",
+            "/Arabic Ai Law/Screenshot 2026-03-09 170742.png",
+            "/Arabic Ai Law/Screenshot 2026-03-09 170547.png",
+            "/Arabic Ai Law/Screenshot 2026-03-09 170559.png",
+            "/Arabic Ai Law/Screenshot 2026-03-09 170614.png",
+
+        ]
     }
 ];
