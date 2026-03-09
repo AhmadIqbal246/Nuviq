@@ -439,10 +439,10 @@ export default function AboutPage() {
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                                 <MagneticButton>
-                                    <a href="/#contact" className="group flex items-center justify-center gap-3 md:gap-4 py-5 md:py-6 px-8 md:px-12 bg-gradient-accent text-white font-bold rounded-2xl shadow-glow transition-all duration-300 w-full sm:w-auto">
+                                    <Link href="/contact" className="group flex items-center justify-center gap-3 md:gap-4 py-5 md:py-6 px-8 md:px-12 bg-gradient-accent text-white font-bold rounded-2xl shadow-glow transition-all duration-300 w-full sm:w-auto">
                                         <span className="whitespace-nowrap">Get Free Quote</span>
                                         <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
-                                    </a>
+                                    </Link>
                                 </MagneticButton>
                                 <a href="mailto:hello@novasoft.dev" className="text-white/70 hover:text-cyan transition-colors font-mono tracking-widest uppercase text-xs md:text-sm">
                                     hello@novasoft.dev

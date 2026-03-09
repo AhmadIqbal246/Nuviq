@@ -32,15 +32,14 @@ const contactDetails = [
     {
         icon: <Phone className="text-violet" size={24} />,
         label: "Call Us",
-        value: "+1 (555) 000-0000",
+        value: "+923150401307",
         description: "Monday to Friday, 9am to 6pm EST.",
         href: "tel:+15550000000"
     },
     {
         icon: <MapPin className="text-cyan" size={24} />,
         label: "Visit Us",
-        value: "Silicon Valley, CA",
-        description: "123 Innovation Way, Tech Park.",
+        value: "DHA Phase 8, Lahore",
         href: "https://maps.google.com"
     }
 ];

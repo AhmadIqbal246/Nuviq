@@ -9,7 +9,7 @@ export default function AIAssistantBot() {
     const [isMinimized, setIsMinimized] = useState(false);
     const [input, setInput] = useState("");
     const [messages, setMessages] = useState([
-        { role: "assistant", content: "Hi! I'm the NovaSoft AI. How can I help you today? I can tell you about our projects like Rep Cloud and Safe-Bill, or our services." }
+        { role: "assistant", content: "Hi! I'm the NovaSoft AI. How can I help you today? I can tell you about our projects or our services." }
     ]);
     const [isLoading, setIsLoading] = useState(false);
     const messagesEndRef = useRef(null);
@@ -38,7 +38,10 @@ export default function AIAssistantBot() {
                 body: JSON.stringify({ messages: [...messages, userMessage] }),
             });
 
-            if (!response.ok) throw new Error("Failed to connect to AI");
+            if (!response.ok) {
+                const errorData = await response.json().catch(() => ({}));
+                throw new Error(errorData.message || "Failed to connect to AI");
+            }
 
             // Handle Streaming
             const reader = response.body.getReader();
@@ -61,7 +64,7 @@ export default function AIAssistantBot() {
             }
         } catch (error) {
             console.error(error);
-            setMessages((prev) => [...prev, { role: "assistant", content: "Sorry, I'm having trouble connecting right now. Please try again later." }]);
+            setMessages((prev) => [...prev, { role: "assistant", content: error.message || "Sorry, I'm having trouble connecting right now. Please try again later." }]);
         } finally {
             setIsLoading(false);
         }
@@ -148,7 +151,7 @@ export default function AIAssistantBot() {
                                         <Send size={18} />
                                     </button>
                                 </div>
-                                <p className="text-[8px] text-center text-white/30 mt-2 uppercase tracking-widest font-mono">Powered by Grok • xAI</p>
+
                             </form>
                         </>
                     )}

@@ -16,7 +16,6 @@ export default function Navbar() {
         { name: "Services", href: "/services" },
         { name: "Our Work", href: "/#projects" },
         { name: "FAQ", href: "/#faq" },
-        { name: "Contact", href: "/contact" },
     ];
 
     // Set portal target after mount
@@ -131,7 +130,7 @@ export default function Navbar() {
                             ))}
                         </div>
 
-                        <Link href="#contact">
+                        <Link href="/contact">
                             <button className="relative py-3.5 px-10 rounded-full bg-gradient-accent text-[11px] font-bold uppercase tracking-[0.15em] shadow-glow hover:shadow-[0_0_40px_rgba(108,99,255,0.4)] group overflow-hidden">
                                 <span className="relative z-10 text-white">Contact Us</span>
                                 <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100" />

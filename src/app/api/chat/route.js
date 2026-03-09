@@ -1,5 +1,6 @@
 import { OpenAI } from "openai";
 import { projects, experiences } from "@/data/content";
+import { rateLimit } from "@/lib/rate-limit";
 
 const xai = new OpenAI({
     apiKey: process.env.GROK_API_KEY,
@@ -8,6 +9,24 @@ const xai = new OpenAI({
 
 export async function POST(req) {
     try {
+        // --- RATE LIMITING ---
+        const ip = req.headers.get("x-forwarded-for") || "anonymous";
+        const limitResult = rateLimit(ip, 10, 60000); // 10 requests per 1 minute
+
+        if (!limitResult.allowed) {
+            return new Response(
+                JSON.stringify({
+                    error: "Too many requests",
+                    message: "You've reached the chat limit. Please try again in a minute."
+                }),
+                {
+                    status: 429,
+                    headers: { "Content-Type": "application/json" }
+                }
+            );
+        }
+        // ---------------------
+
         const { messages } = await req.json();
 
         const systemPrompt = `

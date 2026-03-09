@@ -18,6 +18,7 @@ import {
     CheckCircle2,
     ArrowRight
 } from "lucide-react";
+import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FadeIn from "@/components/animations/FadeIn";
@@ -317,10 +318,10 @@ export default function ServicesPage() {
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                                 <MagneticButton>
-                                    <a href="/#contact" className="group flex items-center gap-4 py-6 px-12 bg-gradient-accent text-white font-bold rounded-2xl shadow-glow transition-all duration-300">
-                                        Start Your Project
+                                    <Link href="/contact" className="group flex items-center gap-4 py-6 px-12 bg-gradient-accent text-white font-bold rounded-2xl shadow-glow transition-all duration-300">
+                                        Get a Free Quote
                                         <ArrowRight size={24} className="group-hover:translate-x-2 transition-transform" />
-                                    </a>
+                                    </Link>
                                 </MagneticButton>
                                 <a href="mailto:hello@novasoft.dev" className="text-white hover:text-cyan transition-colors font-mono tracking-widest uppercase text-sm">
                                     hello@novasoft.dev

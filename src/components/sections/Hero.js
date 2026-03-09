@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState, useRef } from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import FadeIn from "@/components/animations/FadeIn";
@@ -80,9 +81,9 @@ export default function Hero() {
 
                         <div className="flex flex-wrap gap-4 md:gap-6 mt-6 justify-center lg:justify-start">
                             <MagneticButton>
-                                <button className="py-4 px-10 bg-gradient-accent text-base font-bold rounded-lg shadow-glow hover:scale-105 transition-transform duration-300">
-                                    Start Your Project
-                                </button>
+                                <Link href="/contact" className="py-4 px-10 bg-gradient-accent text-base font-bold rounded-lg shadow-glow hover:scale-105 transition-transform duration-300">
+                                    Get a Free Quote
+                                </Link>
                             </MagneticButton>
                             <MagneticButton>
                                 <button className="py-4 px-10 border border-violet text-text-primary font-bold rounded-lg hover:bg-violet/10 transition-colors duration-300">

@@ -122,23 +122,23 @@ export default function Contact() {
                         <h3 className="text-3xl font-serif font-bold text-text-primary">Contact Details</h3>
 
                         <div className="flex flex-col gap-6 font-mono text-base md:text-lg text-muted items-center lg:items-start">
-                            <a href="mailto:hello@ahmad.dev" className="flex items-center gap-6 hover:text-cyan transition-colors">
+                            <a href="mailto:hello@novasoft.dev" className="flex items-center gap-6 hover:text-cyan transition-colors">
                                 <div className="p-4 rounded-full bg-surface border border-white/5 text-cyan">
                                     <Mail size={24} />
                                 </div>
                                 hello@novasoft.dev
                             </a>
-                            <a href="tel:+1234567890" className="flex items-center gap-6 hover:text-violet transition-colors">
+                            <a href="tel:+923150401307" className="flex items-center gap-6 hover:text-violet transition-colors">
                                 <div className="p-4 rounded-full bg-surface border border-white/5 text-violet">
                                     <Phone size={24} />
                                 </div>
-                                +1 (234) 567 890
+                                +92 315 0401307
                             </a>
                             <div className="flex items-center gap-6">
                                 <div className="p-4 rounded-full bg-surface border border-white/5 text-muted">
                                     <MapPin size={24} />
                                 </div>
-                                Remote, Worldwide
+                                DHA Phase 8, Lahore
                             </div>
                         </div>
                     </div>
@@ -146,13 +146,26 @@ export default function Contact() {
                     <div className="flex flex-col gap-8 mt-10 items-center lg:items-start">
                         <h3 className="text-3xl font-serif font-bold text-text-primary">Social Links</h3>
                         <div className="flex gap-6">
-                            {[SiGithub, SiLinkedin, SiTwitter, SiInstagram].map((Icon, i) => (
-                                <MagneticButton key={i}>
-                                    <a href="#" className="p-5 rounded-full bg-surface border border-white/5 text-text-primary hover:text-cyan hover:shadow-glow-cyan transition-all duration-300">
-                                        <Icon size={24} />
-                                    </a>
-                                </MagneticButton>
-                            ))}
+                            <MagneticButton>
+                                <a
+                                    href="https://github.com/AhmadIqbal246"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-14 h-14 flex items-center justify-center rounded-full bg-surface border border-white/5 text-text-primary hover:text-cyan transition-all duration-300 shadow-lg"
+                                >
+                                    <Github size={24} />
+                                </a>
+                            </MagneticButton>
+                            <MagneticButton>
+                                <a
+                                    href="https://www.linkedin.com/in/m-ahmad-iqbal"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-14 h-14 flex items-center justify-center rounded-full bg-surface border border-white/5 text-text-primary hover:text-cyan transition-all duration-300 shadow-lg"
+                                >
+                                    <Linkedin size={24} />
+                                </a>
+                            </MagneticButton>
                         </div>
                     </div>
                 </div>
@@ -160,9 +173,3 @@ export default function Contact() {
         </section>
     );
 }
-
-// Stub for react-icons/si since I might not have exact matches
-function SiGithub(props) { return <Github {...props} />; }
-function SiLinkedin(props) { return <Linkedin {...props} />; }
-function SiTwitter(props) { return <Twitter {...props} />; }
-function SiInstagram(props) { return <Mail {...props} />; }

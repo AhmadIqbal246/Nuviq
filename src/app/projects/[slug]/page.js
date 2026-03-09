@@ -203,10 +203,10 @@ export default function ProjectDetailPage() {
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                                 <MagneticButton>
                                     <button
-                                        onClick={() => router.push("/#contact")}
+                                        onClick={() => router.push("/contact")}
                                         className="group flex items-center justify-center gap-3 md:gap-4 py-5 md:py-6 px-8 md:px-12 bg-gradient-accent text-white font-bold rounded-2xl shadow-glow transition-all duration-300 w-full sm:w-auto"
                                     >
-                                        <span className="whitespace-nowrap">Start Your Project</span>
+                                        <span className="whitespace-nowrap">Get a Free Quote</span>
                                         <ArrowLeft size={20} className="rotate-180 group-hover:translate-x-2 transition-transform" />
                                     </button>
                                 </MagneticButton>

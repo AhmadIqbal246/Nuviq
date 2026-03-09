@@ -24,7 +24,7 @@ export default function Footer() {
                         </p>
                     </div>
                     <MagneticButton>
-                        <Link href="#contact">
+                        <Link href="/contact">
                             <div className="group flex items-center gap-3 py-5 px-10 bg-gradient-accent text-white font-bold rounded-2xl shadow-glow transition-all duration-300">
                                 <span>Get a Free Quote</span>
                                 <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
@@ -50,11 +50,22 @@ export default function Footer() {
                             Engineering digital ecosystems that transform businesses through AI, Web Development, and Custom Software Excellence.
                         </p>
                         <div className="flex gap-4">
-                            {[Twitter, Github, Linkedin, Instagram].map((Icon, i) => (
-                                <a key={i} href="#" className="p-3 rounded-xl bg-surface border border-white/5 text-muted hover:text-cyan hover:border-cyan/30 transition-all">
-                                    <Icon size={18} />
-                                </a>
-                            ))}
+                            <a
+                                href="https://github.com/AhmadIqbal246"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-12 h-12 flex items-center justify-center rounded-full bg-surface border border-white/5 text-muted hover:text-cyan hover:border-cyan/30 transition-all shadow-lg"
+                            >
+                                <Github size={18} />
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/in/m-ahmad-iqbal"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-12 h-12 flex items-center justify-center rounded-full bg-surface border border-white/5 text-muted hover:text-cyan hover:border-cyan/30 transition-all shadow-lg"
+                            >
+                                <Linkedin size={18} />
+                            </a>
                         </div>
                     </div>
 
@@ -91,23 +102,20 @@ export default function Footer() {
                             </a>
                             <div className="flex items-center gap-3">
                                 <Phone size={16} className="text-cyan" />
-                                +1 (234) 567-890
+                                +923150401307
                             </div>
                             <div className="flex items-center gap-3">
                                 <MapPin size={16} className="text-cyan" />
-                                Silicon Valley, CA
+                                DHA Phase 8, Lahore
                             </div>
                         </div>
                     </div>
                 </div>
 
                 {/* Bottom Section */}
-                <div className="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-white/5 gap-6">
-                    <p className="text-muted font-mono text-[10px] uppercase tracking-widest">
+                <div className="flex justify-center items-center pt-10 border-t border-white/5">
+                    <p className="text-muted font-mono text-[10px] uppercase tracking-widest text-center">
                         © {new Date().getFullYear()} NOVASOFT. ALL RIGHTS RESERVED.
-                    </p>
-                    <p className="text-muted font-mono text-[10px] uppercase tracking-widest invisible md:visible">
-                        BUILT WITH NEXT.JS 14 × FRAMER MOTION × GSAP
                     </p>
                 </div>
             </div>
