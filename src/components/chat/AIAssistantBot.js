@@ -161,9 +161,14 @@ export default function AIAssistantBot() {
             {/* Toggle Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-[1.25rem] bg-gradient-accent flex items-center justify-center text-white shadow-[0_10px_30px_rgba(108,99,255,0.4)] hover:scale-105 transition-all duration-300 relative"
+                className={`flex items-center justify-center text-white shadow-[0_10px_30px_rgba(108,99,255,0.4)] hover:scale-105 transition-all duration-300 relative bg-gradient-accent h-12 md:h-14 ${isOpen ? 'w-12 md:w-14 rounded-xl md:rounded-[1.25rem]' : 'w-12 sm:w-auto px-0 sm:px-6 rounded-xl md:rounded-[1.25rem] gap-2 md:gap-3'}`}
             >
-                {isOpen ? <X size={24} /> : <MessageSquare size={24} />}
+                {isOpen ? <X size={24} /> : (
+                    <>
+                        <span className="hidden sm:block font-bold text-sm whitespace-nowrap">Ask Me Anything</span>
+                        <MessageSquare size={24} />
+                    </>
+                )}
             </button>
         </div>
     );

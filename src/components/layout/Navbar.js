@@ -56,7 +56,7 @@ export default function Navbar() {
             <div className="flex justify-between items-center w-full px-6 py-4 border-b border-white/5"
                 style={{ backgroundColor: '#080808' }}
             >
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-1">
                     <div className="relative w-12 h-12 flex items-center justify-center overflow-hidden rounded-xl bg-transparent">
                         <video
                             autoPlay
@@ -113,7 +113,7 @@ export default function Navbar() {
                 <div className="flex items-center justify-between w-full max-w-[100vw] px-6 lg:px-16 mx-auto outline-none">
                     {/* LOGO */}
                     <Link href="/">
-                        <div className="flex items-center gap-3 group cursor-pointer">
+                        <div className="flex items-center gap-1 group cursor-pointer">
                             <div className="relative w-12 h-12 flex items-center justify-center overflow-hidden rounded-xl bg-transparent transition-transform duration-300 group-hover:scale-105">
                                 <video
                                     autoPlay

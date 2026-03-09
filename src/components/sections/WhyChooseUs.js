@@ -99,7 +99,7 @@ export default function WhyChooseUs() {
                             whileInView="visible"
                             viewport={{ once: true, margin: "-50px" }}
                             variants={cardVariants}
-                            className={`group relative p-8 md:p-10 rounded-2xl bg-surface border border-white/5 ${feature.borderHover} transition-all duration-300 ease-out overflow-hidden hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)]`}
+                            className={`group relative p-8 md:p-10 rounded-2xl bg-surface border border-white/5 ${feature.borderHover} transition-all duration-300 ease-out overflow-hidden hover:-translate-y-2 shadow-[0_10px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_15px_50px_rgba(0,0,0,0.8)]`}
                         >
                             {/* Hover gradient overlay */}
                             <div
