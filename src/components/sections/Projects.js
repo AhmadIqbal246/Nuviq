@@ -15,14 +15,8 @@ const navLinks = [
 import { projects } from "@/data/content";
 
 export default function Projects() {
-    const [filter, setFilter] = useState("all");
-
-    const filteredProjects = projects.filter(prj =>
-        filter === "all" || prj.category === filter
-    );
-
     return (
-        <section id="projects" className="py-32 bg-transparent">
+        <section id="projects" className="py-10 lg:py-32 bg-transparent">
             <div className="container mx-auto px-6 lg:px-12">
                 <div className="flex flex-col gap-6 mb-20">
                     <FadeIn direction="down" delay={0.2} distance={20}>
@@ -32,27 +26,13 @@ export default function Projects() {
                         <h2 className="text-4xl md:text-6xl font-serif font-bold text-text-primary">
                             Case Studies & <br /> <span className="text-violet">Recent</span> Projects.
                         </h2>
-
-                        {/* Filter Tabs */}
-                        <div className="flex items-center gap-4 bg-surface p-1 rounded-full border border-white/5">
-                            {["all", "frontend", "fullstack", "backend"].map((cat) => (
-                                <button
-                                    key={cat}
-                                    onClick={() => setFilter(cat)}
-                                    className={`px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-colors duration-300 ${filter === cat ? "bg-gradient-accent text-base" : "text-muted hover:text-text-primary"
-                                        }`}
-                                >
-                                    {cat}
-                                </button>
-                            ))}
-                        </div>
                     </div>
                 </div>
 
                 {/* Projects Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     <AnimatePresence>
-                        {filteredProjects.map((project, index) => (
+                        {projects.map((project, index) => (
                             <ProjectCard key={project.id} project={project} index={index} />
                         ))}
                     </AnimatePresence>
@@ -70,14 +50,14 @@ function ProjectCard({ project, index }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 1, 0.5, 1] }}
-            className="group relative h-[500px] rounded-2xl overflow-hidden border border-white/5 bg-surface"
+            className="group relative h-[380px] md:h-[500px] rounded-2xl overflow-hidden border border-white/5 bg-surface"
         >
             {/* Background Image */}
             <motion.img
                 src={project.image}
                 alt={project.title}
                 loading="lazy"
-                className="absolute inset-0 w-full h-full object-contain p-4 transition-all duration-700 group-hover:scale-105"
+                className="absolute inset-0 w-full h-full object-contain p-2 md:p-6 transition-all duration-700 group-hover:scale-105"
             />
 
             {/* Overlay */}

@@ -99,7 +99,7 @@ export default function FAQ() {
     };
 
     return (
-        <section id="faq" className="py-32 bg-transparent overflow-hidden relative">
+        <section id="faq" className="py-10 lg:py-32 bg-transparent overflow-hidden relative">
             {/* Background glows */}
             <div className="absolute top-[20%] right-[-15%] w-[500px] h-[500px] bg-violet/5 blur-[150px] rounded-full pointer-events-none" />
             <div className="absolute bottom-[20%] left-[-10%] w-[400px] h-[400px] bg-cyan/5 blur-[120px] rounded-full pointer-events-none" />

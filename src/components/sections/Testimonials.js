@@ -7,22 +7,19 @@ import FadeIn from "@/components/animations/FadeIn";
 
 const testimonials = [
     {
-        name: "John Doe",
-        role: "CEO at TechCorp",
-        quote: "Working with Ahmad was an Absolute game-changer. His attention to detail and creative approach brought our vision to life in ways we didn't think possible.",
-        avatar: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=1974&auto=format&fit=crop",
+        name: "Cedric",
+        role: "Safe-Bill | France",
+        quote: "NovaSoft delivered a flawless fintech platform. Their milestone system and AI integration have completely secured our transactions. Exceptional work!",
     },
     {
-        name: "Jane Smith",
-        role: "Product Manager at Visionary",
-        quote: "Ahmad is not only a brilliant developer but also a talented designer. The seamless transition from design to production was incredible.",
-        avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop",
+        name: "Ben",
+        role: "Rep Cloud | England",
+        quote: "Outstanding enterprise solution. The automation they engineered for our FSM platform has drastically improved our operational efficiency. Highly professional team.",
     },
     {
-        name: "Alex Johnson",
-        role: "Founder of Future Labs",
-        quote: "The animations and smoothness of the final product exceeded all our expectations. Highly recommend for any high-end project.",
-        avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=2080&auto=format&fit=crop",
+        name: "Ali Raza",
+        role: "Arabic AI Law | Saudi Arabia",
+        quote: "The complex RAG pipeline and Arabic voice processing work perfectly. NovaSoft has successfully modernized legal research in the KSA domain. Truly impressive.",
     },
 ];
 
@@ -33,7 +30,7 @@ export default function Testimonials() {
     const prev = () => setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
     return (
-        <section id="testimonials" className="py-32 bg-transparent overflow-hidden">
+        <section id="testimonials" className="py-10 lg:py-32 bg-transparent overflow-hidden">
             <div className="container mx-auto px-6 lg:px-12">
                 <div className="flex flex-col gap-6 mb-24 items-center justify-center text-center">
                     <FadeIn direction="down" delay={0.2} distance={20}>
@@ -46,7 +43,7 @@ export default function Testimonials() {
 
                 <div className="relative max-w-4xl mx-auto flex flex-col items-center">
                     {/* Main Card */}
-                    <div className="w-full relative min-h-[400px] flex items-center justify-center">
+                    <div className="w-full relative min-h-[350px] flex items-center justify-center">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={active}
@@ -54,32 +51,23 @@ export default function Testimonials() {
                                 animate={{ opacity: 1, scale: 1, x: 0 }}
                                 exit={{ opacity: 0, scale: 0.9, x: -50 }}
                                 transition={{ duration: 0.5, ease: [0.25, 1, 0.5, 1] }}
-                                className="w-full p-10 md:p-20 rounded-3xl bg-surface border border-white/5 shadow-glow relative"
+                                className="w-full p-10 md:p-16 rounded-3xl bg-surface border border-white/5 shadow-glow relative"
                             >
-                                <Quote className="absolute top-10 right-10 text-violet/20" size={80} />
+                                <Quote className="absolute top-8 right-8 text-violet/20" size={60} />
 
-                                <div className="flex flex-col gap-10">
-                                    <p className="text-2xl md:text-3xl font-serif leading-relaxed italic text-text-primary">
+                                <div className="flex flex-col gap-8">
+                                    <p className="text-xl md:text-2xl font-serif leading-relaxed italic text-text-primary">
                                         "{testimonials[active].quote}"
                                     </p>
 
-                                    <div className="flex items-center gap-6 mt-10">
-                                        <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-cyan/50 p-1">
-                                            <img
-                                                src={testimonials[active].avatar}
-                                                alt={testimonials[active].name}
-                                                loading="lazy"
-                                                className="w-full h-full object-cover rounded-full"
-                                            />
-                                        </div>
-                                        <div>
-                                            <h4 className="text-xl font-bold text-text-primary">
-                                                {testimonials[active].name}
-                                            </h4>
-                                            <p className="text-sm font-mono text-muted uppercase tracking-widest leading-normal whitespace-pre-wrap">
-                                                {testimonials[active].role}
-                                            </p>
-                                        </div>
+                                    <div className="flex flex-col gap-2 border-t border-white/5 pt-8 mt-4">
+                                        <h4 className="text-xl font-bold text-text-primary flex items-center gap-2">
+                                            <span className="w-8 h-[2px] bg-cyan"></span>
+                                            {testimonials[active].name}
+                                        </h4>
+                                        <p className="text-sm font-mono text-muted uppercase tracking-widest leading-normal whitespace-pre-wrap ml-10">
+                                            {testimonials[active].role}
+                                        </p>
                                     </div>
                                 </div>
                             </motion.div>

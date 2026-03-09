@@ -90,14 +90,10 @@ export default function ProjectDetailPage() {
                                 </div>
 
                                 {/* Project Meta */}
-                                <div className="grid grid-cols-2 gap-8 pt-10 border-t border-white/5">
+                                <div className="grid grid-cols-1 gap-8 pt-10 border-t border-white/5">
                                     <div>
                                         <span className="text-xs font-mono text-muted uppercase tracking-widest block mb-2">Client</span>
                                         <span className="text-white font-serif font-bold text-lg">{project.client}</span>
-                                    </div>
-                                    <div>
-                                        <span className="text-xs font-mono text-muted uppercase tracking-widest block mb-2">Category</span>
-                                        <span className="text-white font-serif font-bold text-lg capitalize">{project.category}</span>
                                     </div>
                                 </div>
                             </FadeIn>
@@ -106,11 +102,11 @@ export default function ProjectDetailPage() {
                         <FadeIn direction="left" delay={0.4}>
                             <div className="relative group">
                                 <div className="absolute -inset-4 bg-gradient-accent/20 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                                <div className="relative aspect-[4/3] rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl bg-black/40">
+                                <div className="relative aspect-[4/3] rounded-3xl md:rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl bg-black/40">
                                     <img
                                         src={project.image}
                                         alt={project.title}
-                                        className="w-full h-full object-contain p-4 transition-transform duration-700 group-hover:scale-105"
+                                        className="w-full h-full object-contain p-2 md:p-8 transition-transform duration-700 group-hover:scale-105"
                                     />
                                 </div>
                             </div>
@@ -137,12 +133,12 @@ export default function ProjectDetailPage() {
                             <FadeIn key={i} direction="up" delay={0.1 * i}>
                                 <motion.div
                                     whileHover={{ y: -10 }}
-                                    className="relative rounded-3xl overflow-hidden border border-white/10 group shadow-2xl bg-black/40"
+                                    className="relative rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 group shadow-2xl bg-black/40"
                                 >
                                     <img
                                         src={img}
                                         alt={`${project.title} screen ${i + 1}`}
-                                        className="w-full h-auto object-contain transition-all duration-700"
+                                        className="w-full h-auto object-contain p-1 md:p-6 transition-all duration-700"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
                                 </motion.div>

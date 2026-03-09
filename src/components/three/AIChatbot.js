@@ -22,8 +22,8 @@ function RoboModel() {
             distanceFactor={isMobile ? 10 : 6}
             position={[0, 0, 0]}
             style={{
-                width: isMobile ? '220px' : '400px',
-                height: isMobile ? '220px' : '400px',
+                width: isMobile ? '280px' : '400px',
+                height: isMobile ? '280px' : '400px',
                 pointerEvents: 'none',
                 userSelect: 'none',
                 display: 'flex',
@@ -71,7 +71,7 @@ function ChatbotScene() {
     });
 
     return (
-        <group ref={groupRef} position={position} scale={isMobile ? 0.4 : 0.6}>
+        <group ref={groupRef} position={position} scale={isMobile ? 0.5 : 0.6}>
             <RoboModel />
         </group>
     );
@@ -92,7 +92,11 @@ export default function AIChatbot({ className = "", isAbsolute = true }) {
             initial={{ opacity: 0, x: isAbsolute ? 100 : 0, y: isAbsolute ? 0 : 20 }}
             animate={{ opacity: 1, x: 0, y: 0 }}
             transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
-            className={`${isAbsolute ? "absolute inset-0 w-full h-full z-[2]" : "relative w-full h-[320px] sm:h-[450px] z-[2]"} pointer-events-none overflow-hidden bg-transparent ${className}`}
+            className={`${isAbsolute ? "absolute inset-0 w-full h-full z-[2]" : "relative w-full h-[380px] sm:h-[450px] z-[2]"} pointer-events-none overflow-hidden bg-transparent ${className}`}
+            style={{
+                WebkitMaskImage: 'radial-gradient(ellipse 80% 60% at 50% 55%, black 35%, transparent 100%)',
+                maskImage: 'radial-gradient(ellipse 80% 60% at 50% 55%, black 35%, transparent 100%)',
+            }}
         >
             <Canvas
                 dpr={[1, 1.5]}

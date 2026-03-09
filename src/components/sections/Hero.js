@@ -29,7 +29,7 @@ export default function Hero() {
     }, []);
 
     return (
-        <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-transparent py-20 lg:py-0">
+        <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-transparent pt-20 pb-4 lg:py-0">
 
             {/* DESKTOP ONLY — AI Chatbot as absolute overlay (z: 2) */}
             <div className="hidden lg:block">
