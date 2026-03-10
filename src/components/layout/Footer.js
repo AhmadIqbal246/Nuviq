@@ -42,7 +42,7 @@ export default function Footer() {
                                     N
                                 </div>
                                 <span className="font-serif text-3xl font-bold tracking-tight text-white group-hover:text-cyan transition-colors">
-                                    NOVASOFT
+                                    Z Soft
                                 </span>
                             </div>
                         </Link>
@@ -96,9 +96,9 @@ export default function Footer() {
                     <div className="flex flex-col gap-6">
                         <h4 className="text-white font-bold uppercase tracking-widest text-xs">Get in Touch</h4>
                         <div className="flex flex-col gap-4 text-muted text-sm">
-                            <a href="mailto:hello@novasoft.dev" className="flex items-center gap-3 hover:text-cyan transition-colors">
+                            <a href="mailto:hello@zsofthub.com" className="flex items-center gap-3 hover:text-cyan transition-colors">
                                 <Mail size={16} className="text-cyan" />
-                                hello@novasoft.dev
+                                hello@zsofthub.com
                             </a>
                             <div className="flex items-center gap-3">
                                 <Phone size={16} className="text-cyan" />
@@ -115,14 +115,14 @@ export default function Footer() {
                 {/* Bottom Section */}
                 <div className="flex justify-center items-center pt-10 border-t border-white/5">
                     <p className="text-muted font-mono text-[10px] uppercase tracking-widest text-center">
-                        © {new Date().getFullYear()} NOVASOFT. ALL RIGHTS RESERVED.
+                        © {new Date().getFullYear()} Z Soft. ALL RIGHTS RESERVED.
                     </p>
                 </div>
             </div>
 
             {/* Huge Background Text */}
             <h2 className="absolute -bottom-10 left-1/2 -translate-x-1/2 text-[20vw] font-serif font-black text-white/[0.02] pointer-events-none select-none">
-                NOVASOFT
+                Z Soft
             </h2>
         </footer>
     );

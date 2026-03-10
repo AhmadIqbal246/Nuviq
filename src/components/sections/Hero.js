@@ -74,7 +74,7 @@ export default function Hero() {
                         </div>
 
                         <TextReveal
-                            text="We don't just build software — we engineer digital ecosystems. From AI-driven automation to pixel-perfect web experiences, NovaSoft is your launchpad to the future."
+                            text="We don't just build software — we engineer digital ecosystems. From AI-driven automation to pixel-perfect web experiences, Z Soft is your launchpad to the future."
                             className="text-muted text-base md:text-lg max-w-lg text-center lg:text-left mx-auto lg:mx-0"
                             delay={0.5}
                         />

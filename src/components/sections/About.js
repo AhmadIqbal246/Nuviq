@@ -39,7 +39,7 @@ export default function About() {
 
                     <div className="flex flex-col gap-6 text-muted text-lg leading-relaxed max-w-xl">
                         <p>
-                            NovaSoft is a full-service IT company specializing in building highly performant web applications and AI-powered solutions. Our approach combines technical precision with creative innovation.
+                            Z Soft is a full-service IT company specializing in building highly performant web applications and AI-powered solutions. Our approach combines technical precision with creative innovation.
                         </p>
                         <p>
                             With a team of skilled developers, designers, and AI engineers, we create seamless digital experiences that not only look stunning but deliver real business impact.

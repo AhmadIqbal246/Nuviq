@@ -7,8 +7,8 @@ import FadeIn from "@/components/animations/FadeIn";
 
 const faqs = [
     {
-        question: "What services does NovaSoft offer?",
-        answer: "NovaSoft is a comprehensive IT services company specializing in web development, AI chatbots, RAG systems, and custom software solutions. We build Python and JavaScript applications, create intelligent AI systems, and provide 24/7 support and maintenance.",
+        question: "What services does Z Soft offer?",
+        answer: "Z Soft is a comprehensive IT services company specializing in web development, AI chatbots, RAG systems, and custom software solutions. We build Python and JavaScript applications, create intelligent AI systems, and provide 24/7 support and maintenance.",
     },
     {
         question: "How much do your services cost?",

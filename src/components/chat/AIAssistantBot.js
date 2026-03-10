@@ -9,7 +9,7 @@ export default function AIAssistantBot() {
     const [isMinimized, setIsMinimized] = useState(false);
     const [input, setInput] = useState("");
     const [messages, setMessages] = useState([
-        { role: "assistant", content: "Hi! I'm the NovaSoft AI. How can I help you today? I can tell you about our projects or our services." }
+        { role: "assistant", content: "Hi! I'm the Z Soft AI. How can I help you today? I can tell you about our projects or our services." }
     ]);
     const [isLoading, setIsLoading] = useState(false);
     const messagesEndRef = useRef(null);
@@ -84,7 +84,7 @@ export default function AIAssistantBot() {
                                 <Bot size={20} className="text-white" />
                             </div>
                             <div>
-                                <h3 className="text-white font-bold text-xs">NovaSoft AI</h3>
+                                <h3 className="text-white font-bold text-xs">Z Soft AI</h3>
                                 <div className="flex items-center gap-1.5">
                                     <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                                     <span className="text-[9px] text-white/70 uppercase tracking-widest font-mono font-medium">Online</span>

@@ -188,7 +188,7 @@ export default function TeamPage() {
                     </FadeIn>
                     <h1 className="text-5xl md:text-8xl font-serif font-bold text-white mb-8 leading-tight">
                         The Minds Behind <br />
-                        <span className="gradient-text-animated">NovaSoft</span>
+                        <span className="gradient-text-animated">Z Soft</span>
                     </h1>
                     <p className="text-muted text-xl max-w-3xl mx-auto leading-relaxed mb-12">
                         Meet our exceptional team of engineers, designers, and visionaries dedicated to building the next generation of digital excellence.
@@ -295,12 +295,12 @@ export default function TeamPage() {
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                                 <MagneticButton>
-                                    <a href="mailto:careers@novasoft.dev" className="group flex items-center gap-4 py-6 px-12 bg-gradient-accent text-white font-bold rounded-2xl shadow-glow transition-all duration-300">
+                                    <a href="mailto:careers@Z Soft.dev" className="group flex items-center gap-4 py-6 px-12 bg-gradient-accent text-white font-bold rounded-2xl shadow-glow transition-all duration-300">
                                         Check Open Positions
                                         <ExternalLink size={24} className="group-hover:rotate-12 transition-transform" />
                                     </a>
                                 </MagneticButton>
-                                <a href="https://www.linkedin.com/company/novasoft" target="_blank" rel="noopener noreferrer" className="text-white hover:text-cyan transition-colors font-mono tracking-widest uppercase text-sm">
+                                <a href="https://www.linkedin.com/company/Z Soft" target="_blank" rel="noopener noreferrer" className="text-white hover:text-cyan transition-colors font-mono tracking-widest uppercase text-sm">
                                     Follow us on LinkedIn
                                 </a>
                             </div>

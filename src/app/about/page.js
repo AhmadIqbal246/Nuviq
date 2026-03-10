@@ -55,7 +55,7 @@ const journey = [
     {
         year: "2024",
         title: "Company Founded",
-        description: "NovaSoft was established with a vision to transform businesses through innovative technology solutions.",
+        description: "Z Soft was established with a vision to transform businesses through innovative technology solutions.",
     },
     {
         year: "2024",
@@ -176,7 +176,7 @@ export default function AboutPage() {
                         <span className="gradient-text-animated">Future of Technology</span>.
                     </h1>
                     <p className="text-muted text-xl max-w-3xl mx-auto leading-relaxed mb-12">
-                        NovaSoft is a leading IT services company dedicated to transforming businesses through innovative web development, AI solutions, and custom software. We believe technology should empower growth and drive success.
+                        Z Soft is a leading IT services company dedicated to transforming businesses through innovative web development, AI solutions, and custom software. We believe technology should empower growth and drive success.
                     </p>
 
                     {/* Stats Grid */}
@@ -444,8 +444,8 @@ export default function AboutPage() {
                                         <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
                                     </Link>
                                 </MagneticButton>
-                                <a href="mailto:hello@novasoft.dev" className="text-white/70 hover:text-cyan transition-colors font-mono tracking-widest uppercase text-xs md:text-sm">
-                                    hello@novasoft.dev
+                                <a href="mailto:hello@zsofthub.com" className="text-white/70 hover:text-cyan transition-colors font-mono tracking-widest uppercase text-xs md:text-sm">
+                                    hello@zsofthub.com
                                 </a>
                             </div>
                         </div>

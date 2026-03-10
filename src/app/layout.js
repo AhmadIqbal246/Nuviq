@@ -3,8 +3,8 @@ import './globals.css';
 import ClientLayout from '@/components/layout/ClientLayout';
 
 export const metadata = {
-  title: 'NovaSoft | AI & Web Solutions That Transform Businesses',
-  description: 'NovaSoft is a leading IT services company specializing in web development, AI solutions, and custom software. We build powerful applications that drive business growth.',
+  title: 'Z Soft | AI & Web Solutions That Transform Businesses',
+  description: 'Z Soft is a leading IT services company specializing in web development, AI solutions, and custom software. We build powerful applications that drive business growth.',
 };
 
 export default function RootLayout({ children }) {

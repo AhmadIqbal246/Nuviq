@@ -122,11 +122,11 @@ export default function Contact() {
                         <h3 className="text-3xl font-serif font-bold text-text-primary">Contact Details</h3>
 
                         <div className="flex flex-col gap-6 font-mono text-base md:text-lg text-muted items-center lg:items-start">
-                            <a href="mailto:hello@novasoft.dev" className="flex items-center gap-6 hover:text-cyan transition-colors">
+                            <a href="mailto:hello@zsofthub.com" className="flex items-center gap-6 hover:text-cyan transition-colors">
                                 <div className="p-4 rounded-full bg-surface border border-white/5 text-cyan">
                                     <Mail size={24} />
                                 </div>
-                                hello@novasoft.dev
+                                hello@zsofthub.com
                             </a>
                             <a href="tel:+923150401307" className="flex items-center gap-6 hover:text-violet transition-colors">
                                 <div className="p-4 rounded-full bg-surface border border-white/5 text-violet">

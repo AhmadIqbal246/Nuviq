@@ -1,5 +1,5 @@
 /**
- * Centralized content data for the NovaSoft company website.
+ * Centralized content data for the Z Soft company website.
  * Keep large text arrays, project details, and experience entries here to keep components clean.
  */
 

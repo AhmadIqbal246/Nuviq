@@ -69,7 +69,7 @@ export default function Navbar() {
                         </video>
                     </div>
                     <span className="font-serif text-xl font-bold tracking-tighter text-text-primary uppercase">
-                        NovaSoft
+                        Z Soft
                     </span>
                 </div>
                 <button
@@ -126,7 +126,7 @@ export default function Navbar() {
                                 </video>
                             </div>
                             <span className="font-serif text-2xl font-bold tracking-tighter text-text-primary uppercase">
-                                NovaSoft
+                                Z Soft
                             </span>
                         </div>
                     </Link>

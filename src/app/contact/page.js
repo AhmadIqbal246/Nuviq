@@ -25,9 +25,9 @@ const contactDetails = [
     {
         icon: <Mail className="text-cyan" size={24} />,
         label: "Email Us",
-        value: "hello@novasoft.dev",
+        value: "hello@zsofthub.com",
         description: "Our team typically responds within 2 hours.",
-        href: "mailto:hello@novasoft.dev"
+        href: "mailto:hello@zsofthub.com"
     },
     {
         icon: <Phone className="text-violet" size={24} />,

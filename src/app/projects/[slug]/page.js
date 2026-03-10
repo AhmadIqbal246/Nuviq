@@ -210,8 +210,8 @@ export default function ProjectDetailPage() {
                                         <ArrowLeft size={20} className="rotate-180 group-hover:translate-x-2 transition-transform" />
                                     </button>
                                 </MagneticButton>
-                                <a href="mailto:hello@novasoft.dev" className="text-white/70 hover:text-cyan transition-colors font-mono tracking-widest uppercase text-xs md:text-sm">
-                                    hello@novasoft.dev
+                                <a href="mailto:hello@zsofthub.com" className="text-white/70 hover:text-cyan transition-colors font-mono tracking-widest uppercase text-xs md:text-sm">
+                                    hello@zsofthub.com
                                 </a>
                             </div>
                         </div>

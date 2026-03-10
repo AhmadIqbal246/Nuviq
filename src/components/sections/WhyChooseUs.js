@@ -82,7 +82,7 @@ export default function WhyChooseUs() {
                     </FadeIn>
                     <h2 className="text-4xl md:text-6xl font-serif font-bold text-text-primary">
                         Why Businesses Trust{" "}
-                        <span className="gradient-text-animated">NovaSoft</span>.
+                        <span className="gradient-text-animated">Z Soft</span>.
                     </h2>
                     <p className="text-muted text-lg max-w-2xl">
                         We combine cutting-edge technology with deep industry expertise to deliver solutions that truly transform your business.

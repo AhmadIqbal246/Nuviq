@@ -9,7 +9,7 @@ const testimonials = [
     {
         name: "Cedric",
         role: "Safe-Bill | France",
-        quote: "NovaSoft delivered a flawless fintech platform. Their milestone system and AI integration have completely secured our transactions. Exceptional work!",
+        quote: "Z Soft delivered a flawless fintech platform. Their milestone system and AI integration have completely secured our transactions. Exceptional work!",
     },
     {
         name: "Ben",
@@ -19,7 +19,7 @@ const testimonials = [
     {
         name: "Ali Raza",
         role: "Arabic AI Law | Saudi Arabia",
-        quote: "The complex RAG pipeline and Arabic voice processing work perfectly. NovaSoft has successfully modernized legal research in the KSA domain. Truly impressive.",
+        quote: "The complex RAG pipeline and Arabic voice processing work perfectly. Z Soft has successfully modernized legal research in the KSA domain. Truly impressive.",
     },
 ];
 
