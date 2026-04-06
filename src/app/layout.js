@@ -14,6 +14,7 @@ export default function RootLayout({ children }) {
         <ClientLayout>
           {children}
         </ClientLayout>
+  <script src="http://localhost:3000/api/widget"></script>
       </body>
     </html>
   );
