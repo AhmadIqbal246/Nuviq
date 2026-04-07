@@ -14,7 +14,13 @@ export default function RootLayout({ children }) {
         <ClientLayout>
           {children}
         </ClientLayout>
-  <script src="http://localhost:3000/api/widget"></script>
+  <script>
+  window.FalconConfig = { theme: "#ff00d0", name: "Vercel Chatbot" };
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src="http://localhost:3000/api/widget"; g.async=true;
+  s.parentNode.insertBefore(g,s);
+  }(document,"script"));
+</script>
       </body>
     </html>
   );
