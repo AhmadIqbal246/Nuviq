@@ -15,15 +15,16 @@ export default function RootLayout({ children }) {
         <ClientLayout>
           {children}
         </ClientLayout>
-   <Script id="falcon-ai-widget">
+      <Script id="falcon-ai-widget">
         {`
-          window.FalconConfig = { theme: "#007bff", name: "Z Soft AI" };
+          window.FalconConfig = { theme: "#11ff00", name: "Vercel ai" };
           (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-          g.src="http://localhost:3000/api/widget"; g.async=true;
+          g.src="https://falconxoft.com/api/widget"; g.async=true;
           s.parentNode.insertBefore(g,s);
           }(document,"script"));
         `}
       </Script>
+    </>
       </body>
     </html>
   );
