@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
         </ClientLayout>
       <Script id="falcon-ai-widget">
         {`
-          window.FalconConfig = { theme: "#11ff00", name: "Vercel ai" };
+          window.FalconConfig = { theme: "#00ffee", name: "Zaidi Bot" };
           (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
           g.src="https://falconxoft.com/api/widget"; g.async=true;
           s.parentNode.insertBefore(g,s);
