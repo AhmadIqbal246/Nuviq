@@ -24,7 +24,6 @@ export default function RootLayout({ children }) {
           }(document,"script"));
         `}
       </Script>
-    </>
       </body>
     </html>
   );
